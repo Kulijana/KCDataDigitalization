@@ -25,9 +25,21 @@
               "src/favicon.512x512.png"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/sb2-resources/css/sb-admin-2.min.css",
+              "src/assets/sb2-resources/vendor/bootstrap/scss/bootstrap.scss",
+              "src/assets/sb2-resources/vendor/datatables/dataTables.bootstrap4.css",
+              "src/assets/sb2-resources/vendor/fontawesome-free/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/sb2-resources/vendor/jquery/jquery.min.js",
+              "src/assets/sb2-resources/vendor/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/sb2-resources/vendor/jquery-easing/jquery.easing.min.js",
+              "src/assets/sb2-resources/vendor/datatables/jquery.dataTables.js",
+              "src/assets/sb2-resources/vendor/datatables/dataTables.bootstrap4.js",
+              "src/assets/sb2-resources/js/sb-admin-2.min.js",
+              "src/assets/sb2-resources/js/demo/datatables-demo.js"
+            ]
           },
           "configurations": {
             "dev": {
