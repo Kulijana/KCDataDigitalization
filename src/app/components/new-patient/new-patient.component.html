@@ -1,0 +1,209 @@
+<table class="table table-bordered table-dark">
+  <tr>
+    <th style="width: 30%">Broj</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.number"></th>
+  </tr>
+  <tr>
+    <th>Ime i prezime</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.nameSurname"></th>
+  </tr>
+  <tr>
+    <th>Pol</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="polM" name="pol" [(ngModel)]="patient.gender" value="male">
+        <label class="custom-control-label" for="polM">Muško</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="polZ" name="pol" [(ngModel)]="patient.gender" value="female">
+        <label class="custom-control-label" for="polZ">Žensko</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Da li ste pušač</th>
+    <th>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" id="pusacDa" name="pusac" [(ngModel)]="patient.smoker" value="true">
+            <label class="custom-control-label" for="pusacDa">Da</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" id="pusacNe" name="pusac" [(ngModel)]="patient.smoker" value="false">
+            <label class="custom-control-label" for="pusacNe">Ne</label>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Broj telefona</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.phoneNumber"></th>
+  </tr>
+  <tr>
+    <th>Adresa</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.address"></th>
+  </tr>
+  <tr>
+    <th>Jmbg</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.jmbg"></th>
+  </tr>
+  <tr>
+    <th>Stepen obrazovanja</th>
+    <!-- TODO properly rename the classes -->
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stepenObrazovanja4Razreda" name="stepenObrazovanja" 
+        [(ngModel)]="patient.educationLevel" value="4grades">
+        <label class="custom-control-label" for="stepenObrazovanja4Razreda">4 razreda</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stepenObrazovanjaOsnovnaSkola" name="stepenObrazovanja"
+        [(ngModel)]="patient.educationLevel" value="elementary">
+        <label class="custom-control-label" for="stepenObrazovanjaOsnovnaSkola">osnovna škola</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stepenObrazovanjaSrednjaSkola" name="stepenObrazovanja"
+        [(ngModel)]="patient.educationLevel" value="high">
+        <label class="custom-control-label" for="stepenObrazovanjaSrednjaSkola">srednja škola</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stepenObrazovanjaFakultet" name="stepenObrazovanja"
+        [(ngModel)]="patient.educationLevel" value="college">
+        <label class="custom-control-label" for="stepenObrazovanjaFakultet">fakultet</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stepenObrazovanjaMagistar" name="stepenObrazovanja"
+        [(ngModel)]="patient.educationLevel" value="master">
+        <label class="custom-control-label" for="stepenObrazovanjaMagistar">magistar</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stepenObrazovanjaDoktorat" name="stepenObrazovanja"
+        [(ngModel)]="patient.educationLevel" value="doctorate">
+        <label class="custom-control-label" for="stepenObrazovanjaDoktorat">doktorat</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Bračni status</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="bracniStatusSam" name="bracniStatus"
+        [(ngModel)]="patient.marriageStatus" value="single">
+        <label class="custom-control-label" for="bracniStatusSam">sam(a)</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="bracniStatusBZajednica" name="bracniStatus"
+        [(ngModel)]="patient.marriageStatus" value="married">
+        <label class="custom-control-label" for="bracniStatusBZajednica">u bračnoj zajednici</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="bracniStatusVBZajednica" name="bracniStatus"
+        [(ngModel)]="patient.marriageStatus" value="relationship">
+        <label class="custom-control-label" for="bracniStatusVBZajednica">u vanbračnoj zajednici</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="bracniStatusRazveden" name="bracniStatus"
+        [(ngModel)]="patient.marriageStatus" value="divorced">
+        <label class="custom-control-label" for="bracniStatusRazveden">razveden(a)</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="bracniStatusUdovac" name="bracniStatus"
+        [(ngModel)]="patient.marriageStatus" value="widowed">
+        <label class="custom-control-label" for="bracniStatusUdovac">udovac/udovica</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Da li imate dece</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="decaDa" name="deca" [(ngModel)]="patient.children" value="true">
+        <label class="custom-control-label" for="decaDa">da</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="decaNe" name="deca" [(ngModel)]="patient.children" value="false">
+        <label class="custom-control-label" for="decaNe">ne</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Da li imate unučad</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="unucadDa" name="unucad" [(ngModel)]="patient.grandchildren" value="true">
+        <label class="custom-control-label" for="unucadDa">da</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="unucadNe" name="unucad" [(ngModel)]="patient.grandchildren" value="false">
+        <label class="custom-control-label" for="unucadNe">ne</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Da li ih čuvate redovno</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="cuvanjeDa" name="cuvanje"
+        [(ngModel)]="patient.watchingGrandchildren" value="true">
+        <label class="custom-control-label" for="cuvanjeDa">da</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="cuvanjeNe" name="cuvanje"
+        [(ngModel)]="patient.watchingGrandchildren" value="false">
+        <label class="custom-control-label" for="cuvanjeNe">ne</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Broj članova domaćinstva</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.householdMembers"></th>
+  </tr>
+  <tr>
+    <th>Da li ste putuvali negde van NS?(u proteklih 5 godina)</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="putovanjeVanNsDa" name="putovanjeVanNs"
+        [(ngModel)]="patient.travelOutOfNS" value="true">
+        <label class="custom-control-label" for="putovanjeVanNsDa">da</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="putovanjeVanNsNe" name="putovanjeVanNs"
+        [(ngModel)]="patient.travelOutOfNS" value="false">
+        <label class="custom-control-label" for="putovanjeVanNsNe">ne</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Da li ste putuvali negde van Srbije?(u proteklih 5 godina)</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="putovanjeVanSrbDa" name="putovanjeVanSrb"
+        [(ngModel)]="patient.travelOutOfSrb" value="true">
+        <label class="custom-control-label" for="putovanjeVanSrbDa">da</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="putovanjeVanSrbNe" name="putovanjeVanSrb"
+        [(ngModel)]="patient.travelOutOfSrb" value="false">
+        <label class="custom-control-label" for="putovanjeVanSrbNe">ne</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Živite u</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="smestajKuca" name="smestaj"
+        [(ngModel)]="patient.livingIn" value="house">
+        <label class="custom-control-label" for="smestajKuca">kuća</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="smestajStan" name="smestaj"
+        [(ngModel)]="patient.livingIn" value="flat">
+        <label class="custom-control-label" for="smestajStan">stan</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Da li vozite kola?</th>
+    <th><div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="kolaDa" name="kola"
+        [(ngModel)]="patient.driving" value="true">
+        <label class="custom-control-label" for="kolaDa">da</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="kolaNe" name="kola"
+        [(ngModel)]="patient.driving" value="false">
+        <label class="custom-control-label" for="kolaNe">ne</label>
+    </div></th>
+  </tr>
+  <tr>
+    <th>Koje bolesti imate?</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.diseases"></th>
+  </tr>
+  <tr>
+    <th>Koje lekove redovno koristite?</th>
+    <th><input type="text" class="form-control" [(ngModel)]="patient.medication"></th>
+  </tr>
+</table>
+
+<button class="btn btn-primary" (click)="savePatient()">Save</button>
