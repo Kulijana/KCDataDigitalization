@@ -19,6 +19,7 @@ import { WebviewDirective } from './directives/webview.directive';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewPatientComponent } from './components/new-patient/new-patient.component';
+import { SarcFComponent } from './components/sarc-f/sarc-f.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -30,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HomeComponent,
     WebviewDirective,
-    NewPatientComponent
+    NewPatientComponent,
+    SarcFComponent
   ],
   imports: [
     BrowserModule,

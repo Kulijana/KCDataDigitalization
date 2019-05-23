@@ -1,0 +1,109 @@
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>Snaga</th>
+    <th>Koliko Vam je teško nošenje težine od 5kg?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="snaga0" name="snaga"
+        [(ngModel)]="sarcFForm.strength" value="0">
+        <label class="custom-control-label" for="snaga0">Nije mi teško - 0</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="snaga1" name="snaga"
+        [(ngModel)]="sarcFForm.strength" value="1">
+        <label class="custom-control-label" for="snaga1">Donekle mi je teško - 1</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="snaga2" name="snaga"
+        [(ngModel)]="sarcFForm.strength" value="2">
+        <label class="custom-control-label" for="snaga2">Jako ili ne mogu - 2</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Pomoć u kretanju</th>
+    <th>Koliko Vam je teško da pređete sa jednog na drugi kraj prostorije?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="kretanje0" name="kretanje"
+        [(ngModel)]="sarcFForm.movement" value="0">
+        <label class="custom-control-label" for="kretanje0">Nije mi teško - 0</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="kretanje1" name="kretanje"
+        [(ngModel)]="sarcFForm.movement" value="1">
+        <label class="custom-control-label" for="kretanje1">Donekle mi je teško - 1</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="kretanje2" name="kretanje"
+        [(ngModel)]="sarcFForm.movement" value="2">
+        <label class="custom-control-label" for="kretanje2">Jako, koristim pomagalo ili i ne mogu - 2</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Ustajanje sa stolice</th>
+    <th>Koliko Vam je teško da ustanete iz fotelje ili kreveta?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="ustajanje0" name="ustajanje"
+        [(ngModel)]="sarcFForm.gettingUp" value="0">
+        <label class="custom-control-label" for="ustajanje0">Nije mi teško - 0</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="ustajanje1" name="ustajanje"
+        [(ngModel)]="sarcFForm.gettingUp" value="1">
+        <label class="custom-control-label" for="ustajanje1">Donekle mi je teško - 1</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="ustajanje2" name="ustajanje"
+        [(ngModel)]="sarcFForm.gettingUp" value="2">
+        <label class="custom-control-label" for="ustajanje2">Jako ili ne mogu bez pomoći - 2</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Penjanje uz stepenice</th>
+    <th>Koliko Vam je teško da se popnete uz 10 stepenica?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="penjanje0" name="penjanje"
+        [(ngModel)]="sarcFForm.climbing" value="0">
+        <label class="custom-control-label" for="penjanje0">Nije mi teško - 0</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="penjanje1" name="penjanje"
+        [(ngModel)]="sarcFForm.climbing" value="1">
+        <label class="custom-control-label" for="penjanje1">Donekle mi je teško - 1</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="penjanje2" name="penjanje"
+        [(ngModel)]="sarcFForm.climbing" value="2">
+        <label class="custom-control-label" for="penjanje2">Jako ili ne mogu - 2</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Padovi</th>
+    <th>Koliko puta ste pali tokom proteklih godinu dana?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="padovi0" name="padovi"
+        [(ngModel)]="sarcFForm.falling" value="0">
+        <label class="custom-control-label" for="padovi0">Ni jednom - 0</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="padovi1" name="padovi"
+        [(ngModel)]="sarcFForm.falling" value="1">
+        <label class="custom-control-label" for="padovi1">1-3 puta - 1</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="padovi2" name="padovi"
+        [(ngModel)]="sarcFForm.falling" value="2">
+        <label class="custom-control-label" for="padovi2">4 ili više puta - 2</label>
+      </div>
+    </th>
+  </tr>
+</table>
+
+<button class="btn btn-primary" (click)="save()">Save</button>

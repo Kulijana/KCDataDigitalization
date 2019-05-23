@@ -16,4 +16,8 @@ export class HomeComponent implements OnInit {
   gotoNewPatient(){
     this.router.navigateByUrl('/new-patient');
   }
+
+  gotoSarcF(){
+    this.router.navigateByUrl('/sarc-f');
+  }
 }

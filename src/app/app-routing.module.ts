@@ -2,6 +2,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NewPatientComponent } from './components/new-patient/new-patient.component';
+import { SarcFComponent } from './components/sarc-f/sarc-f.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
     {
         path: 'new-patient',
         component: NewPatientComponent
+    },
+    {
+        path: 'sarc-f',
+        component: SarcFComponent
     }
 ];
 
