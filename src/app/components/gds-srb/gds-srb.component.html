@@ -1,0 +1,274 @@
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>
+      Da li ste zadovoljni svojim životom?
+      (Are you basically satisfied with your life?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="satisfiedYes" name="satisfied"
+          [(ngModel)]="gdsSrbForm.satisfied" value="true">
+        <label class="custom-control-label" for="satisfiedYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="satisfiedNo" name="satisfied"
+          [(ngModel)]="gdsSrbForm.satisfied" value="false">
+        <label class="custom-control-label" for="satisfiedNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li ste odustali od mnogih aktivnosti i interesovanja?
+      (Have you dropped many of your activities and interests?)
+
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="droppedActivitiesYes" name="droppedActivities"
+          [(ngModel)]="gdsSrbForm.droppedActivities" value="true">
+        <label class="custom-control-label" for="droppedActivitiesYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="droppedActivitiesNo" name="droppedActivities"
+          [(ngModel)]="gdsSrbForm.droppedActivities" value="false">
+        <label class="custom-control-label" for="droppedActivitiesNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li osećate da je vaš život prazan?
+      (Do you feel that your life is empty?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="emptyLifeYes" name="emptyLife"
+          [(ngModel)]="gdsSrbForm.emptyLife" value="true">
+        <label class="custom-control-label" for="emptyLifeYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="emptyLifeNo" name="emptyLife"
+          [(ngModel)]="gdsSrbForm.emptyLife" value="false">
+        <label class="custom-control-label" for="emptyLifeNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li vam je često dosadno?
+      (Do you often get bored?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="oftenBoredYes" name="oftenBored"
+          [(ngModel)]="gdsSrbForm.oftenBored" value="true">
+        <label class="custom-control-label" for="oftenBoredYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="oftenBoredNo" name="oftenBored"
+          [(ngModel)]="gdsSrbForm.oftenBored" value="false">
+        <label class="custom-control-label" for="oftenBoredNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li ste uglavnom dobro raspoloženi?
+      (Are you in good spirits most of the time?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="goodSpiritYes" name="goodSpirit"
+          [(ngModel)]="gdsSrbForm.goodSpirit" value="true">
+        <label class="custom-control-label" for="goodSpiritYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="goodSpiritNo" name="goodSpirit"
+          [(ngModel)]="gdsSrbForm.goodSpirit" value="false">
+        <label class="custom-control-label" for="goodSpiritNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li se plašite da će vam se dogoditi nešto loše?
+      (Are you afraid that something bad is going to happen to you?)
+
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="afraidYes" name="afraid" [(ngModel)]="gdsSrbForm.afraid"
+          value="true">
+        <label class="custom-control-label" for="afraidYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="afraidNo" name="afraid" [(ngModel)]="gdsSrbForm.afraid"
+          value="false">
+        <label class="custom-control-label" for="afraidNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li se osećate srećnim većinu vremena?
+      (Do you feel happy most of the time?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="happyYes" name="happy" [(ngModel)]="gdsSrbForm.happy"
+          value="true">
+        <label class="custom-control-label" for="happyYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="happyNo" name="happy" [(ngModel)]="gdsSrbForm.happy"
+          value="false">
+        <label class="custom-control-label" for="happyNo">Ne</label>
+      </div>
+    </th>
+  <tr>
+    <th>
+      Da li se često osećate bespomoćnim?
+      (Do you often feel helpless?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="helplessYes" name="helpless"
+          [(ngModel)]="gdsSrbForm.helpless" value="true">
+        <label class="custom-control-label" for="helplessYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="helplessNo" name="helpless"
+          [(ngModel)]="gdsSrbForm.helpless" value="false">
+        <label class="custom-control-label" for="helplessNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li više volite da ostanete kod kuće nego da izlazite i radite nove stvari?
+      (Do you prefer to stay at home rather than go out and do new things?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stayingHomeYes" name="stayingHome"
+          [(ngModel)]="gdsSrbForm.stayingHome" value="true">
+        <label class="custom-control-label" for="stayingHomeYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="stayingHomeNo" name="stayingHome"
+          [(ngModel)]="gdsSrbForm.stayingHome" value="false">
+        <label class="custom-control-label" for="stayingHomeNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li smatrate da imate više teškoća sa pamćenjem nego drugi?
+      (Do you feel you have more problems with your memory than most?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="memoryProblemsYes" name="memoryProblems"
+          [(ngModel)]="gdsSrbForm.memoryProblems" value="true">
+        <label class="custom-control-label" for="memoryProblemsYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="memoryProblemsNo" name="memoryProblems"
+          [(ngModel)]="gdsSrbForm.memoryProblems" value="false">
+        <label class="custom-control-label" for="memoryProblemsNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li mislite da je divno živeti danas?
+      (Do you think it is wonderful to be alive now?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="wonderfulToBeAliveYes" name="wonderfulToBeAlive"
+          [(ngModel)]="gdsSrbForm.wonderfulToBeAlive" value="true">
+        <label class="custom-control-label" for="wonderfulToBeAliveYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="wonderfulToBeAliveNo" name="wonderfulToBeAlive"
+          [(ngModel)]="gdsSrbForm.wonderfulToBeAlive" value="false">
+        <label class="custom-control-label" for="wonderfulToBeAliveNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li se sada osećate prilično beskorisno?
+      (Do you feel pretty worthless the way you are now?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="worthlessYes" name="worthless"
+          [(ngModel)]="gdsSrbForm.worthless" value="true">
+        <label class="custom-control-label" for="worthlessYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="worthlessNo" name="worthless"
+          [(ngModel)]="gdsSrbForm.worthless" value="false">
+        <label class="custom-control-label" for="worthlessNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li se osećate kao da ste puni energije?
+      (Do you feel full of energy?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="fullOfEnergyYes" name="fullOfEnergy"
+          [(ngModel)]="gdsSrbForm.fullOfEnergy" value="true">
+        <label class="custom-control-label" for="fullOfEnergyYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="fullOfEnergyNo" name="fullOfEnergy"
+          [(ngModel)]="gdsSrbForm.fullOfEnergy" value="false">
+        <label class="custom-control-label" for="fullOfEnergyNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li smatrate svoju situaciju beznadežnom?
+      (Do you feel that your situation is hopeless?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="situationHopelessYes" name="situationHopeless"
+          [(ngModel)]="gdsSrbForm.situationHopeless" value="true">
+        <label class="custom-control-label" for="situationHopelessYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="situationHopelessNo" name="situationHopeless"
+          [(ngModel)]="gdsSrbForm.situationHopeless" value="false">
+        <label class="custom-control-label" for="situationHopelessNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Da li mislite da većina ljudi ima više sreće od vas?
+      (Do you think that most people are better than you are?)
+    </th>
+    <th>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="unluckyYes" name="unlucky" [(ngModel)]="gdsSrbForm.unlucky"
+          value="true">
+        <label class="custom-control-label" for="unluckyYes">Da</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="unluckyNo" name="unlucky" [(ngModel)]="gdsSrbForm.unlucky"
+          value="false">
+        <label class="custom-control-label" for="unluckyNo">Ne</label>
+      </div>
+    </th>
+  </tr>
+</table>
+<button (click)="save()">Save</button>

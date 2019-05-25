@@ -20,4 +20,12 @@ export class HomeComponent implements OnInit {
   gotoSarcF(){
     this.router.navigateByUrl('/sarc-f');
   }
+
+  gotoEqD5(){
+    this.router.navigateByUrl('/eq-d5');
+  }
+  
+  gotoGdsSrb(){
+    this.router.navigateByUrl('/gds-srb');
+  }
 }

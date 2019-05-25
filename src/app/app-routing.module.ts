@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NewPatientComponent } from './components/new-patient/new-patient.component';
 import { SarcFComponent } from './components/sarc-f/sarc-f.component';
+import { EqD5Component } from './components/eq-d5/eq-d5.component';
+import { GdsSrbComponent } from './components/gds-srb/gds-srb.component';
 
 const routes: Routes = [
     {
@@ -16,6 +18,14 @@ const routes: Routes = [
     {
         path: 'sarc-f',
         component: SarcFComponent
+    },
+    {
+        path: 'eq-d5',
+        component: EqD5Component
+    },
+    {
+        path: 'gds-srb',
+        component: GdsSrbComponent
     }
 ];
 

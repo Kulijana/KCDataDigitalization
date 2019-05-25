@@ -1,0 +1,108 @@
+<table class="table table-bordered table-dark">
+  <tr>
+    <td>Pokretljivost</td>
+    <td>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pokretljivost0" name="pokretljivost"
+        [(ngModel)]="eqD5Form.movement" value="0">
+        <label class="custom-control-label" for="pokretljivost0">Nemam problema sa kretanjem</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pokretljivost1" name="pokretljivost"
+        [(ngModel)]="eqD5Form.movement" value="1">
+        <label class="custom-control-label" for="pokretljivost1">Imam nekih problema pri kretanju</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pokretljivost2" name="pokretljivost"
+        [(ngModel)]="eqD5Form.movement" value="2">
+        <label class="custom-control-label" for="pokretljivost2">Vezan sam za postelju</label>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>Briga o sebi</td>
+    <td>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="brigaOSebi0" name="brigaOSebi"
+        [(ngModel)]="eqD5Form.selfCare" value="0">
+        <label class="custom-control-label" for="brigaOSebi0">Nemam problema sa brigom o sebi</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="brigaOSebi1" name="brigaOSebi"
+        [(ngModel)]="eqD5Form.selfCare" value="1">
+        <label class="custom-control-label" for="brigaOSebi1">Imam nekih problema pri kretanju</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="brigaOSebi2" name="brigaOSebi"
+        [(ngModel)]="eqD5Form.selfCare" value="2">
+        <label class="custom-control-label" for="brigaOSebi2">Nisam u stanju da se operem ili obučem</label>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Uobičajene aktivnosti(npr. posao, učenje, kućni poslovi, porodične ili slobodne aktivnosti)</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="aktivnosti0" name="aktivnosti"
+        [(ngModel)]="eqD5Form.regularActivities" value="0">
+        <label class="custom-control-label" for="aktivnosti0">Nemam problema sa obavljanjem svojih uobičajenih aktivnosti</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="aktivnosti1" name="aktivnosti"
+        [(ngModel)]="eqD5Form.regularActivities" value="1">
+        <label class="custom-control-label" for="aktivnosti1">Imam nekih problema u obavljanju svojih uobičajenih aktivnosti</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="aktivnosti2" name="aktivnosti"
+        [(ngModel)]="eqD5Form.regularActivities" value="2">
+        <label class="custom-control-label" for="aktivnosti2">Nisam u stanju da obavljam svoje uobičajene aktivnosti</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Bol/Nelagodnost</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bol0" name="bol"
+        [(ngModel)]="eqD5Form.pain" value="0">
+        <label class="custom-control-label" for="bol0">Ne osećam bol ili nelagodnost</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bol1" name="bol"
+        [(ngModel)]="eqD5Form.pain" value="1">
+        <label class="custom-control-label" for="bol1">Osećam umeren bol ili nelagodnost</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bol2" name="bol"
+        [(ngModel)]="eqD5Form.pain" value="2">
+        <label class="custom-control-label" for="bol2">Osećam krajnji bol ili nelagodnost</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Briga/Potištenost</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="briga0" name="briga"
+        [(ngModel)]="eqD5Form.struggle" value="0">
+        <label class="custom-control-label" for="briga0">Nisam brižan(a) ili potišten(a)</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="briga1" name="briga"
+        [(ngModel)]="eqD5Form.struggle" value="1">
+        <label class="custom-control-label" for="briga1">Umereno sam brižan(a) ili potišten(a)</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="briga2" name="briga"
+        [(ngModel)]="eqD5Form.struggle" value="2">
+        <label class="custom-control-label" for="briga2">Krajnje sam brižan(a) ili potišten(a)</label>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>Vaše zdravstveno stanje danas</th>
+    <th><input type="text"  [(ngModel)]="eqD5Form.healthStatus"></th>
+  </tr>
+</table>
+
+<button class="btn btn-primary" (click)="save()">Save</button>
