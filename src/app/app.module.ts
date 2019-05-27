@@ -23,6 +23,7 @@ import { SarcFComponent } from './components/sarc-f/sarc-f.component';
 import { EqD5Component } from './components/eq-d5/eq-d5.component';
 import { MmseComponent } from './components/mmse/mmse.component';
 import { GdsSrbComponent } from './components/gds-srb/gds-srb.component';
+import { IpaqComponent } from './components/ipaq/ipaq.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -38,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SarcFComponent,
     EqD5Component,
     MmseComponent,
-    GdsSrbComponent
+    GdsSrbComponent,
+    IpaqComponent
   ],
   imports: [
     BrowserModule,
