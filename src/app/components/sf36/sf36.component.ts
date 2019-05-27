@@ -15,4 +15,7 @@ export class Sf36Component implements OnInit {
   ngOnInit() {
   }
 
+  save(){
+    console.dir(this.sf36Form);
+  }
 }

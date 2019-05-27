@@ -1027,38 +1027,192 @@
 </table>
 
 <table class="table table-bordered table-dark">
-    <tr>
-        <th style="width: 50%">10.	Da li su tokom prethodne 4 sedmice Vaše fizičko zdravlje ili emocionalni problemi uticali na Vaše socijalne aktivnosti (kao što su posećivanje prijatelja, rođaka itd)?</th>
-        <th>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities1" name="chronicallyLimitingActivities"
-              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="1">
-            <label class="custom-control-label" for="chronicallyLimitingActivities1">Sve vreme</label>
-          </div>
-        </th>
-        <th>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities2" name="chronicallyLimitingActivities"
-              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="2">
-            <label class="custom-control-label" for="chronicallyLimitingActivities2">Većinu vremena</label></div>
-        </th>
-        <th>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities3" name="chronicallyLimitingActivities"
-              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="3">
-            <label class="custom-control-label" for="chronicallyLimitingActivities3">Ponekad</label></div>
-        </th>
-        <th>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities4" name="chronicallyLimitingActivities"
-              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="4">
-            <label class="custom-control-label" for="chronicallyLimitingActivities4">Retko</label></div>
-        </th>
-        <th>
-          <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities5" name="chronicallyLimitingActivities"
-              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="5">
-            <label class="custom-control-label" for="chronicallyLimitingActivities5">Nikako</label></div>
-        </th>
-      </tr>
+  <tr>
+    <th style="width: 50%">10. Da li su tokom prethodne 4 sedmice Vaše fizičko zdravlje ili emocionalni problemi uticali
+      na Vaše socijalne aktivnosti (kao što su posećivanje prijatelja, rođaka itd)?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities1"
+          name="chronicallyLimitingActivities" [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="1">
+        <label class="custom-control-label" for="chronicallyLimitingActivities1">Sve vreme</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities2"
+          name="chronicallyLimitingActivities" [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="2">
+        <label class="custom-control-label" for="chronicallyLimitingActivities2">Većinu vremena</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities3"
+          name="chronicallyLimitingActivities" [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="3">
+        <label class="custom-control-label" for="chronicallyLimitingActivities3">Ponekad</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities4"
+          name="chronicallyLimitingActivities" [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="4">
+        <label class="custom-control-label" for="chronicallyLimitingActivities4">Retko</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities5"
+          name="chronicallyLimitingActivities" [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="5">
+        <label class="custom-control-label" for="chronicallyLimitingActivities5">Nikako</label></div>
+    </th>
+  </tr>
 </table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>11. Koliko je za Vas TAČAN ili NETAČAN svaki od sledećih iskaza?</th>
+      <th>Definitivno tačno</th>
+      <th>Uglavnom tačno</th>
+      <th>Ne znam</th>
+      <th>Retko</th>
+      <th>Definitivno netačno</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a. Čini mi se da se brže razbolim od ostalih ljudi</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="illFasterThanMost1" name="illFasterThanMost"
+            [(ngModel)]="sf36Form.illFasterThanMost" value="1">
+          <label class="custom-control-label" for="illFasterThanMost1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="illFasterThanMost2" name="illFasterThanMost"
+            [(ngModel)]="sf36Form.illFasterThanMost" value="2">
+          <label class="custom-control-label" for="illFasterThanMost2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="illFasterThanMost3" name="illFasterThanMost"
+            [(ngModel)]="sf36Form.illFasterThanMost" value="3">
+          <label class="custom-control-label" for="illFasterThanMost3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="illFasterThanMost4" name="illFasterThanMost"
+            [(ngModel)]="sf36Form.illFasterThanMost" value="4">
+          <label class="custom-control-label" for="illFasterThanMost4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="illFasterThanMost5" name="illFasterThanMost"
+            [(ngModel)]="sf36Form.illFasterThanMost" value="5">
+          <label class="custom-control-label" for="illFasterThanMost5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>b. Zdrav sam kao i ostali koje znam</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="healthyAsOthers1" name="healthyAsOthers"
+            [(ngModel)]="sf36Form.healthyAsOthers" value="1">
+          <label class="custom-control-label" for="healthyAsOthers1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="healthyAsOthers2" name="healthyAsOthers"
+            [(ngModel)]="sf36Form.healthyAsOthers" value="2">
+          <label class="custom-control-label" for="healthyAsOthers2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="healthyAsOthers3" name="healthyAsOthers"
+            [(ngModel)]="sf36Form.healthyAsOthers" value="3">
+          <label class="custom-control-label" for="healthyAsOthers3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="healthyAsOthers4" name="healthyAsOthers"
+            [(ngModel)]="sf36Form.healthyAsOthers" value="4">
+          <label class="custom-control-label" for="healthyAsOthers4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="healthyAsOthers5" name="healthyAsOthers"
+            [(ngModel)]="sf36Form.healthyAsOthers" value="5">
+          <label class="custom-control-label" for="healthyAsOthers5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>c. Očekujem da se moje zdravlje pogorša</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="expectingHealthDeterioration1"
+            name="expectingHealthDeterioration" [(ngModel)]="sf36Form.expectingHealthDeterioration" value="1">
+          <label class="custom-control-label" for="expectingHealthDeterioration1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="expectingHealthDeterioration2"
+            name="expectingHealthDeterioration" [(ngModel)]="sf36Form.expectingHealthDeterioration" value="2">
+          <label class="custom-control-label" for="expectingHealthDeterioration2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="expectingHealthDeterioration3"
+            name="expectingHealthDeterioration" [(ngModel)]="sf36Form.expectingHealthDeterioration" value="3">
+          <label class="custom-control-label" for="expectingHealthDeterioration3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="expectingHealthDeterioration4"
+            name="expectingHealthDeterioration" [(ngModel)]="sf36Form.expectingHealthDeterioration" value="4">
+          <label class="custom-control-label" for="expectingHealthDeterioration4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="expectingHealthDeterioration5"
+            name="expectingHealthDeterioration" [(ngModel)]="sf36Form.expectingHealthDeterioration" value="5">
+          <label class="custom-control-label" for="expectingHealthDeterioration5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>d. Moje zdravlje je odlično</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="greatHealth1" name="greatHealth"
+            [(ngModel)]="sf36Form.greatHealth" value="1">
+          <label class="custom-control-label" for="greatHealth1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="greatHealth2" name="greatHealth"
+            [(ngModel)]="sf36Form.greatHealth" value="2">
+          <label class="custom-control-label" for="greatHealth2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="greatHealth3" name="greatHealth"
+            [(ngModel)]="sf36Form.greatHealth" value="3">
+          <label class="custom-control-label" for="greatHealth3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="greatHealth4" name="greatHealth"
+            [(ngModel)]="sf36Form.greatHealth" value="4">
+          <label class="custom-control-label" for="greatHealth4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="greatHealth5" name="greatHealth"
+            [(ngModel)]="sf36Form.greatHealth" value="5">
+          <label class="custom-control-label" for="greatHealth5"></label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="save()" class="btn primary-btn">Save</button>
