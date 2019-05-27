@@ -28,4 +28,8 @@ export class HomeComponent implements OnInit {
   gotoGdsSrb(){
     this.router.navigateByUrl('/gds-srb');
   }
+
+  gotoSF36(){
+    this.router.navigateByUrl('/sf36');
+  }
 }

@@ -1,0 +1,1064 @@
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>1. Generalno, kazali biste da je Vaše zdravlje:</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="health1" name="health" [(ngModel)]="sf36Form.health"
+          value="1">
+        <label class="custom-control-label" for="health1">Odlično</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="health2" name="health" [(ngModel)]="sf36Form.health"
+          value="2">
+        <label class="custom-control-label" for="health2">Vrlo dobro</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="health3" name="health" [(ngModel)]="sf36Form.health"
+          value="3">
+        <label class="custom-control-label" for="health3">Dobro</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="health4" name="health" [(ngModel)]="sf36Form.health"
+          value="4">
+        <label class="custom-control-label" for="health4">Slabo</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="health5" name="health" [(ngModel)]="sf36Form.health"
+          value="5">
+        <label class="custom-control-label" for="health5">Loše</label>
+      </div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>2. Upoređujući sa prošlom godinom, kako biste ocenili Vaše zdravstveno stanje?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthComparedToLastYear1" name="healthComparedToLastYear"
+          [(ngModel)]="sf36Form.healthComparedToLastYear" value="1">
+        <label class="custom-control-label" for="healthComparedToLastYear1">Mnogo bolje sada nego prošle godine
+        </label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthComparedToLastYear2" name="healthComparedToLastYear"
+          [(ngModel)]="sf36Form.healthComparedToLastYear" value="2">
+        <label class="custom-control-label" for="healthComparedToLastYear2">Nešto bolje sada nego prošle godine
+        </label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthComparedToLastYear3" name="healthComparedToLastYear"
+          [(ngModel)]="sf36Form.healthComparedToLastYear" value="3">
+        <label class="custom-control-label" for="healthComparedToLastYear3">Otprilike isto kao i prošle godine
+        </label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthComparedToLastYear4" name="healthComparedToLastYear"
+          [(ngModel)]="sf36Form.healthComparedToLastYear" value="4">
+        <label class="custom-control-label" for="healthComparedToLastYear4">Nešto gore sada nego prošle godine
+        </label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthComparedToLastYear5" name="healthComparedToLastYear"
+          [(ngModel)]="sf36Form.healthComparedToLastYear" value="5">
+        <label class="custom-control-label" for="healthComparedToLastYear5">Mnogo gore sada nego prošle godine
+        </label>
+      </div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>3. Sledeća pitanja su o aktivnostima dnevnog života. Da li Vas Vaše zdravlje ograničava u obavljanju ovih
+        aktivnosti. Ako da, koliko?</th>
+      <th>Da, ograničava me mnogo</th>
+      <th>Da, ograničava me malo</th>
+      <th>Ne, uopšte me ne ograničava</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a. Teške aktivnosti, kao što su trčanje, podizanje teških predmeta, učestvovanje u ekstremnim sportovima</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="heavyActivities1" name="heavyActivities"
+            [(ngModel)]="sf36Form.heavyActivities" value="1">
+          <label class="custom-control-label" for="heavyActivities1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="heavyActivities2" name="heavyActivities"
+            [(ngModel)]="sf36Form.heavyActivities" value="2">
+          <label class="custom-control-label" for="heavyActivities2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="heavyActivities3" name="heavyActivities"
+            [(ngModel)]="sf36Form.heavyActivities" value="3">
+          <label class="custom-control-label" for="heavyActivities3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>b. Umerene aktivnosti, kao što su pomeranje stola, korišćenje usisivača ili rad u bašti</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="moderateActivities1" name="moderateActivities"
+            [(ngModel)]="sf36Form.moderateActivities" value="1">
+          <label class="custom-control-label" for="moderateActivities1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="moderateActivities2" name="moderateActivities"
+            [(ngModel)]="sf36Form.moderateActivities" value="2">
+          <label class="custom-control-label" for="moderateActivities2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="moderateActivities3" name="moderateActivities"
+            [(ngModel)]="sf36Form.moderateActivities" value="3">
+          <label class="custom-control-label" for="moderateActivities3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>c. Podizanje ili nošenje namirnica</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="carryingIngridients1" name="carryingIngridients"
+            [(ngModel)]="sf36Form.carryingIngridients" value="1">
+          <label class="custom-control-label" for="carryingIngridients1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="carryingIngridients2" name="carryingIngridients"
+            [(ngModel)]="sf36Form.carryingIngridients" value="2">
+          <label class="custom-control-label" for="carryingIngridients2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="carryingIngridients3" name="carryingIngridients"
+            [(ngModel)]="sf36Form.carryingIngridients" value="3">
+          <label class="custom-control-label" for="carryingIngridients3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>d. Penjanje na nakoliko stepenika</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="climbingCoupleStairs1" name="climbingCoupleStairs"
+            [(ngModel)]="sf36Form.climbingCoupleStairs" value="1">
+          <label class="custom-control-label" for="climbingCoupleStairs1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="climbingCoupleStairs2" name="climbingCoupleStairs"
+            [(ngModel)]="sf36Form.climbingCoupleStairs" value="2">
+          <label class="custom-control-label" for="climbingCoupleStairs2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="climbingCoupleStairs3" name="climbingCoupleStairs"
+            [(ngModel)]="sf36Form.climbingCoupleStairs" value="3">
+          <label class="custom-control-label" for="climbingCoupleStairs3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>e. Penjanje na jedan stepenik</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="climbingOneStair1" name="climbingOneStair"
+            [(ngModel)]="sf36Form.climbingOneStair" value="1">
+          <label class="custom-control-label" for="climbingOneStair1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="climbingOneStair2" name="climbingOneStair"
+            [(ngModel)]="sf36Form.climbingOneStair" value="2">
+          <label class="custom-control-label" for="climbingOneStair2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="climbingOneStair3" name="climbingOneStair"
+            [(ngModel)]="sf36Form.climbingOneStair" value="3">
+          <label class="custom-control-label" for="climbingOneStair3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>f. Savijanje, klečanje ili saginjanje</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="stooping1" name="stooping"
+            [(ngModel)]="sf36Form.stooping" value="1">
+          <label class="custom-control-label" for="stooping1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="stooping2" name="stooping"
+            [(ngModel)]="sf36Form.stooping" value="2">
+          <label class="custom-control-label" for="stooping2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="stooping3" name="stooping"
+            [(ngModel)]="sf36Form.stooping" value="3">
+          <label class="custom-control-label" for="stooping3"></label></div>
+      </th>
+    </tr>
+
+    <tr>
+      <th>g. Pešačenje više od 1500 metara</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walkingOver1500m1" name="walkingOver1500m"
+            [(ngModel)]="sf36Form.walkingOver1500m" value="1">
+          <label class="custom-control-label" for="walkingOver1500m1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walkingOver1500m2" name="walkingOver1500m"
+            [(ngModel)]="sf36Form.walkingOver1500m" value="2">
+          <label class="custom-control-label" for="walkingOver1500m2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walkingOver1500m3" name="walkingOver1500m"
+            [(ngModel)]="sf36Form.walkingOver1500m" value="3">
+          <label class="custom-control-label" for="walkingOver1500m3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>h. Pešačenje nekoliko stotina metara</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walkingCouple100m1" name="walkingCouple100m"
+            [(ngModel)]="sf36Form.walkingCouple100m" value="1">
+          <label class="custom-control-label" for="walkingCouple100m1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walkingCouple100m2" name="walkingCouple100m"
+            [(ngModel)]="sf36Form.walkingCouple100m" value="2">
+          <label class="custom-control-label" for="walkingCouple100m2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walkingCouple100m3" name="walkingCouple100m"
+            [(ngModel)]="sf36Form.walkingCouple100m" value="3">
+          <label class="custom-control-label" for="walkingCouple100m3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>i. Pešačenje do 100 metara</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walking100m1" name="walking100m"
+            [(ngModel)]="sf36Form.walking100m" value="1">
+          <label class="custom-control-label" for="walking100m1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walking100m2" name="walking100m"
+            [(ngModel)]="sf36Form.walking100m" value="2">
+          <label class="custom-control-label" for="walking100m2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="walking100m3" name="walking100m"
+            [(ngModel)]="sf36Form.walking100m" value="3">
+          <label class="custom-control-label" for="walking100m3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>j. Kupanje ili oblačenje</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="showering1" name="showering"
+            [(ngModel)]="sf36Form.showering" value="1">
+          <label class="custom-control-label" for="showering1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="showering2" name="showering"
+            [(ngModel)]="sf36Form.showering" value="2">
+          <label class="custom-control-label" for="showering2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="showering3" name="showering"
+            [(ngModel)]="sf36Form.showering" value="3">
+          <label class="custom-control-label" for="showering3"></label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>4. Da li ste tokom prethodne 4 sedmice imali neki od sledećih problema u Vašem poslu ili redovnim dnevnim
+        aktivnostima, a koji je bio rezultat Vašeg fizičkog zdravlja?</th>
+      <th>Sve vreme</th>
+      <th>Često</th>
+      <th>Ponekad</th>
+      <th>Retko</th>
+      <th>Nikako</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th style="width: 50%">a. Skraćen vremenski period koji ste proveli na poslu ili drugim aktivnostima</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriod1" name="shorterWorkingPeriod"
+            [(ngModel)]="sf36Form.shorterWorkingPeriod" value="1">
+          <label class="custom-control-label" for="shorterWorkingPeriod1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriod2" name="shorterWorkingPeriod"
+            [(ngModel)]="sf36Form.shorterWorkingPeriod" value="2">
+          <label class="custom-control-label" for="shorterWorkingPeriod2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriod3" name="shorterWorkingPeriod"
+            [(ngModel)]="sf36Form.shorterWorkingPeriod" value="3">
+          <label class="custom-control-label" for="shorterWorkingPeriod3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriod4" name="shorterWorkingPeriod"
+            [(ngModel)]="sf36Form.shorterWorkingPeriod" value="4">
+          <label class="custom-control-label" for="shorterWorkingPeriod4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriod5" name="shorterWorkingPeriod"
+            [(ngModel)]="sf36Form.shorterWorkingPeriod" value="5">
+          <label class="custom-control-label" for="shorterWorkingPeriod5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>b. Smanjen radni učinak</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffect1" name="reducedWorkingEffect"
+            [(ngModel)]="sf36Form.reducedWorkingEffect" value="1">
+          <label class="custom-control-label" for="reducedWorkingEffect1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffect2" name="reducedWorkingEffect"
+            [(ngModel)]="sf36Form.reducedWorkingEffect" value="2">
+          <label class="custom-control-label" for="reducedWorkingEffect2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffect3" name="reducedWorkingEffect"
+            [(ngModel)]="sf36Form.reducedWorkingEffect" value="3">
+          <label class="custom-control-label" for="reducedWorkingEffect3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffect4" name="reducedWorkingEffect"
+            [(ngModel)]="sf36Form.reducedWorkingEffect" value="4">
+          <label class="custom-control-label" for="reducedWorkingEffect4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffect5" name="reducedWorkingEffect"
+            [(ngModel)]="sf36Form.reducedWorkingEffect" value="5">
+          <label class="custom-control-label" for="reducedWorkingEffect5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>c. Bili ste ograničeni u obavljanju neke vrste posla ili drugih aktivnosti</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="limitedActivities1" name="limitedActivities"
+            [(ngModel)]="sf36Form.limitedActivities" value="1">
+          <label class="custom-control-label" for="limitedActivities1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="limitedActivities2" name="limitedActivities"
+            [(ngModel)]="sf36Form.limitedActivities" value="2">
+          <label class="custom-control-label" for="limitedActivities2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="limitedActivities3" name="limitedActivities"
+            [(ngModel)]="sf36Form.limitedActivities" value="3">
+          <label class="custom-control-label" for="limitedActivities3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="limitedActivities4" name="limitedActivities"
+            [(ngModel)]="sf36Form.limitedActivities" value="4">
+          <label class="custom-control-label" for="limitedActivities4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="limitedActivities5" name="limitedActivities"
+            [(ngModel)]="sf36Form.limitedActivities" value="5">
+          <label class="custom-control-label" for="limitedActivities5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>d. Imali ste poteškoće obavljajući posao ili neke druge aktivnosti (npr. to je zahtevalo dodatni napor)</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="difficultiesInActivities1"
+            name="difficultiesInActivities" [(ngModel)]="sf36Form.difficultiesInActivities" value="1">
+          <label class="custom-control-label" for="difficultiesInActivities1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="difficultiesInActivities2"
+            name="difficultiesInActivities" [(ngModel)]="sf36Form.difficultiesInActivities" value="2">
+          <label class="custom-control-label" for="difficultiesInActivities2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="difficultiesInActivities3"
+            name="difficultiesInActivities" [(ngModel)]="sf36Form.difficultiesInActivities" value="3">
+          <label class="custom-control-label" for="difficultiesInActivities3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="difficultiesInActivities4"
+            name="difficultiesInActivities" [(ngModel)]="sf36Form.difficultiesInActivities" value="4">
+          <label class="custom-control-label" for="difficultiesInActivities4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="difficultiesInActivities5"
+            name="difficultiesInActivities" [(ngModel)]="sf36Form.difficultiesInActivities" value="5">
+          <label class="custom-control-label" for="difficultiesInActivities5"></label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <th>5. Da li ste tokom prethodne 4 sedmice imali neki od sledećih problema u Vašem poslu ili drugim svakodnevnim
+      aktivnostima, a koji je bio rezultat nekih emocionalnih problema (kao što su osećaj depresije ili anksioznosti)?
+    </th>
+    <th>Sve vreme</th>
+    <th>Često</th>
+    <th>Ponekad</th>
+    <th>Retko</th>
+    <th>Nikako</th>
+  </thead>
+  <tbody>
+    <tr>
+      <th style="width: 50%">a. Skraćen vremenski period koji ste proveli na poslu ili drugim aktivnostima</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriodEmotional1"
+            name="shorterWorkingPeriodEmotional" [(ngModel)]="sf36Form.shorterWorkingPeriodEmotional" value="1">
+          <label class="custom-control-label" for="shorterWorkingPeriodEmotional1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriodEmotional2"
+            name="shorterWorkingPeriodEmotional" [(ngModel)]="sf36Form.shorterWorkingPeriodEmotional" value="2">
+          <label class="custom-control-label" for="shorterWorkingPeriodEmotional2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriodEmotional3"
+            name="shorterWorkingPeriodEmotional" [(ngModel)]="sf36Form.shorterWorkingPeriodEmotional" value="3">
+          <label class="custom-control-label" for="shorterWorkingPeriodEmotional3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriodEmotional4"
+            name="shorterWorkingPeriodEmotional" [(ngModel)]="sf36Form.shorterWorkingPeriodEmotional" value="4">
+          <label class="custom-control-label" for="shorterWorkingPeriodEmotional4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="shorterWorkingPeriodEmotional5"
+            name="shorterWorkingPeriodEmotional" [(ngModel)]="sf36Form.shorterWorkingPeriodEmotional" value="5">
+          <label class="custom-control-label" for="shorterWorkingPeriodEmotional5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>b. Smanjen radni učinak</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffectEmotional1"
+            name="reducedWorkingEffectEmotional" [(ngModel)]="sf36Form.reducedWorkingEffectEmotional" value="1">
+          <label class="custom-control-label" for="reducedWorkingEffectEmotional1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffectEmotional2"
+            name="reducedWorkingEffectEmotional" [(ngModel)]="sf36Form.reducedWorkingEffectEmotional" value="2">
+          <label class="custom-control-label" for="reducedWorkingEffectEmotional2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffectEmotional3"
+            name="reducedWorkingEffectEmotional" [(ngModel)]="sf36Form.reducedWorkingEffectEmotional" value="3">
+          <label class="custom-control-label" for="reducedWorkingEffectEmotional3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffectEmotional4"
+            name="reducedWorkingEffectEmotional" [(ngModel)]="sf36Form.reducedWorkingEffectEmotional" value="4">
+          <label class="custom-control-label" for="reducedWorkingEffectEmotional4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="reducedWorkingEffectEmotional5"
+            name="reducedWorkingEffectEmotional" [(ngModel)]="sf36Form.reducedWorkingEffectEmotional" value="5">
+          <label class="custom-control-label" for="reducedWorkingEffectEmotional5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>c. Odradili posao ili svakodnevne aktivnosti s manje pažnje nego obično</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="lessAttentionEmotional1" name="lessAttentionEmotional"
+            [(ngModel)]="sf36Form.lessAttentionEmotional" value="1">
+          <label class="custom-control-label" for="lessAttentionEmotional1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="lessAttentionEmotional2" name="lessAttentionEmotional"
+            [(ngModel)]="sf36Form.lessAttentionEmotional" value="2">
+          <label class="custom-control-label" for="lessAttentionEmotional2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="lessAttentionEmotional3" name="lessAttentionEmotional"
+            [(ngModel)]="sf36Form.lessAttentionEmotional" value="3">
+          <label class="custom-control-label" for="lessAttentionEmotional3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="lessAttentionEmotional4" name="lessAttentionEmotional"
+            [(ngModel)]="sf36Form.lessAttentionEmotional" value="4">
+          <label class="custom-control-label" for="lessAttentionEmotional4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="lessAttentionEmotional5" name="lessAttentionEmotional"
+            [(ngModel)]="sf36Form.lessAttentionEmotional" value="5">
+          <label class="custom-control-label" for="lessAttentionEmotional5"></label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th style="width: 50%">6. Za vreme prethodne 4 sedmice , do kojih limita je Vaše fizičko ili emocionalno zdravlje
+      uticalo na Vaše
+      normalne socijalne aktivnosti sa Vašom porodicom, prijateljima ili komšijama?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="effectivelyLimitingActivities1"
+          name="effectivelyLimitingActivities" [(ngModel)]="sf36Form.effectivelyLimitingActivities" value="1">
+        <label class="custom-control-label" for="effectivelyLimitingActivities1">Nimalo</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="effectivelyLimitingActivities2"
+          name="effectivelyLimitingActivities" [(ngModel)]="sf36Form.effectivelyLimitingActivities" value="2">
+        <label class="custom-control-label" for="effectivelyLimitingActivities2">Malo</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="effectivelyLimitingActivities3"
+          name="effectivelyLimitingActivities" [(ngModel)]="sf36Form.effectivelyLimitingActivities" value="3">
+        <label class="custom-control-label" for="effectivelyLimitingActivities3">Umereno</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="effectivelyLimitingActivities4"
+          name="effectivelyLimitingActivities" [(ngModel)]="sf36Form.effectivelyLimitingActivities" value="4">
+        <label class="custom-control-label" for="effectivelyLimitingActivities4">Mnogo</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="effectivelyLimitingActivities5"
+          name="effectivelyLimitingActivities" [(ngModel)]="sf36Form.effectivelyLimitingActivities" value="5">
+        <label class="custom-control-label" for="effectivelyLimitingActivities5">U najvećoj mogućoj meri</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th style="width: 50%">7. Tokom protekle 4 sedmice, bolovi su bili…?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pain1" name="pain" [(ngModel)]="sf36Form.pain" value="1">
+        <label class="custom-control-label" for="pain1">Nije ih bilo</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pain2" name="pain" [(ngModel)]="sf36Form.pain" value="2">
+        <label class="custom-control-label" for="pain2">Vrlo blagi</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pain3" name="pain" [(ngModel)]="sf36Form.pain" value="3">
+        <label class="custom-control-label" for="pain3">Blagi</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pain4" name="pain" [(ngModel)]="sf36Form.pain" value="4">
+        <label class="custom-control-label" for="pain4">Umereni</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pain5" name="pain" [(ngModel)]="sf36Form.pain" value="5">
+        <label class="custom-control-label" for="pain5">Jaki</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="pain6" name="pain" [(ngModel)]="sf36Form.pain" value="6">
+        <label class="custom-control-label" for="pain6">Vrlo jaki</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th style="width: 50%">8. Tokom protekle 4 sedmice, koliko je bol uticao na Vaš normalan rad (uključujući rad unutar
+      i van kuće)?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="workAffectedByPain1" name="workAffectedByPain"
+          [(ngModel)]="sf36Form.workAffectedByPain" value="1">
+        <label class="custom-control-label" for="workAffectedByPain1">Nimalo</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="workAffectedByPain2" name="workAffectedByPain"
+          [(ngModel)]="sf36Form.workAffectedByPain" value="2">
+        <label class="custom-control-label" for="workAffectedByPain2">Malo</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="workAffectedByPain3" name="workAffectedByPain"
+          [(ngModel)]="sf36Form.workAffectedByPain" value="3">
+        <label class="custom-control-label" for="workAffectedByPain3">Umereno</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="workAffectedByPain4" name="workAffectedByPain"
+          [(ngModel)]="sf36Form.workAffectedByPain" value="4">
+        <label class="custom-control-label" for="workAffectedByPain4">Mnogo</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="workAffectedByPain5" name="workAffectedByPain"
+          [(ngModel)]="sf36Form.workAffectedByPain" value="5">
+        <label class="custom-control-label" for="workAffectedByPain5">U najvećoj mogućoj meri</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th style="width: 50%">9. Sledeća pitanja tiču se Vašeg emotivnog stanja i ličnih osećaja tokom prethodne 4
+        sedmice. Za svako pitanje molimo da date po jedan odgovor koji je najbliži onome kako ste se osećali. Koliko
+        vremena u protekle 4 sedmice…</th>
+      <th>Sve vreme</th>
+      <th>Često</th>
+      <th>Ponekad</th>
+      <th>Retko</th>
+      <th>Nikako</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a. Ste se osećali punim života?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfLife1" name="fullOfLife"
+            [(ngModel)]="sf36Form.fullOfLife" value="1">
+          <label class="custom-control-label" for="fullOfLife1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfLife2" name="fullOfLife"
+            [(ngModel)]="sf36Form.fullOfLife" value="2">
+          <label class="custom-control-label" for="fullOfLife2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfLife3" name="fullOfLife"
+            [(ngModel)]="sf36Form.fullOfLife" value="3">
+          <label class="custom-control-label" for="fullOfLife3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfLife4" name="fullOfLife"
+            [(ngModel)]="sf36Form.fullOfLife" value="4">
+          <label class="custom-control-label" for="fullOfLife4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfLife5" name="fullOfLife"
+            [(ngModel)]="sf36Form.fullOfLife" value="5">
+          <label class="custom-control-label" for="fullOfLife5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>b. Ste bili vrlo nervozni?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="nervous1" name="nervous" [(ngModel)]="sf36Form.nervous"
+            value="1">
+          <label class="custom-control-label" for="nervous1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="nervous2" name="nervous" [(ngModel)]="sf36Form.nervous"
+            value="2">
+          <label class="custom-control-label" for="nervous2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="nervous3" name="nervous" [(ngModel)]="sf36Form.nervous"
+            value="3">
+          <label class="custom-control-label" for="nervous3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="nervous4" name="nervous" [(ngModel)]="sf36Form.nervous"
+            value="4">
+          <label class="custom-control-label" for="nervous4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="nervous5" name="nervous" [(ngModel)]="sf36Form.nervous"
+            value="5">
+          <label class="custom-control-label" for="nervous5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>c. Ste se osećali toliko loše da ništa nije moglo da vas razveseli?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="notCheerful1" name="notCheerful"
+            [(ngModel)]="sf36Form.notCheerful" value="1">
+          <label class="custom-control-label" for="notCheerful1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="notCheerful2" name="notCheerful"
+            [(ngModel)]="sf36Form.notCheerful" value="2">
+          <label class="custom-control-label" for="notCheerful2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="notCheerful3" name="notCheerful"
+            [(ngModel)]="sf36Form.notCheerful" value="3">
+          <label class="custom-control-label" for="notCheerful3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="notCheerful4" name="notCheerful"
+            [(ngModel)]="sf36Form.notCheerful" value="4">
+          <label class="custom-control-label" for="notCheerful4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="notCheerful5" name="notCheerful"
+            [(ngModel)]="sf36Form.notCheerful" value="5">
+          <label class="custom-control-label" for="notCheerful5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>d. Ste osećali mir i smirenost?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="peace1" name="peace" [(ngModel)]="sf36Form.peace"
+            value="1">
+          <label class="custom-control-label" for="peace1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="peace2" name="peace" [(ngModel)]="sf36Form.peace"
+            value="2">
+          <label class="custom-control-label" for="peace2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="peace3" name="peace" [(ngModel)]="sf36Form.peace"
+            value="3">
+          <label class="custom-control-label" for="peace3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="peace4" name="peace" [(ngModel)]="sf36Form.peace"
+            value="4">
+          <label class="custom-control-label" for="peace4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="peace5" name="peace" [(ngModel)]="sf36Form.peace"
+            value="5">
+          <label class="custom-control-label" for="peace5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>e. Ste imali puno energije?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfEnergy1" name="fullOfEnergy"
+            [(ngModel)]="sf36Form.fullOfEnergy" value="1">
+          <label class="custom-control-label" for="fullOfEnergy1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfEnergy2" name="fullOfEnergy"
+            [(ngModel)]="sf36Form.fullOfEnergy" value="2">
+          <label class="custom-control-label" for="fullOfEnergy2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfEnergy3" name="fullOfEnergy"
+            [(ngModel)]="sf36Form.fullOfEnergy" value="3">
+          <label class="custom-control-label" for="fullOfEnergy3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfEnergy4" name="fullOfEnergy"
+            [(ngModel)]="sf36Form.fullOfEnergy" value="4">
+          <label class="custom-control-label" for="fullOfEnergy4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="fullOfEnergy5" name="fullOfEnergy"
+            [(ngModel)]="sf36Form.fullOfEnergy" value="5">
+          <label class="custom-control-label" for="fullOfEnergy5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>f. Ste se osećali utučeno i depresivno?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="depressed1" name="depressed"
+            [(ngModel)]="sf36Form.depressed" value="1">
+          <label class="custom-control-label" for="depressed1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="depressed2" name="depressed"
+            [(ngModel)]="sf36Form.depressed" value="2">
+          <label class="custom-control-label" for="depressed2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="depressed3" name="depressed"
+            [(ngModel)]="sf36Form.depressed" value="3">
+          <label class="custom-control-label" for="depressed3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="depressed4" name="depressed"
+            [(ngModel)]="sf36Form.depressed" value="4">
+          <label class="custom-control-label" for="depressed4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="depressed5" name="depressed"
+            [(ngModel)]="sf36Form.depressed" value="5">
+          <label class="custom-control-label" for="depressed5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>g. Ste se osećali iscrpljeno?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="exhausted1" name="exhausted"
+            [(ngModel)]="sf36Form.exhausted" value="1">
+          <label class="custom-control-label" for="exhausted1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="exhausted2" name="exhausted"
+            [(ngModel)]="sf36Form.exhausted" value="2">
+          <label class="custom-control-label" for="exhausted2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="exhausted3" name="exhausted"
+            [(ngModel)]="sf36Form.exhausted" value="3">
+          <label class="custom-control-label" for="exhausted3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="exhausted4" name="exhausted"
+            [(ngModel)]="sf36Form.exhausted" value="4">
+          <label class="custom-control-label" for="exhausted4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="exhausted5" name="exhausted"
+            [(ngModel)]="sf36Form.exhausted" value="5">
+          <label class="custom-control-label" for="exhausted5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>h. Ste bili srećni?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="happy1" name="happy" [(ngModel)]="sf36Form.happy"
+            value="1">
+          <label class="custom-control-label" for="happy1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="happy2" name="happy" [(ngModel)]="sf36Form.happy"
+            value="2">
+          <label class="custom-control-label" for="happy2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="happy3" name="happy" [(ngModel)]="sf36Form.happy"
+            value="3">
+          <label class="custom-control-label" for="happy3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="happy4" name="happy" [(ngModel)]="sf36Form.happy"
+            value="4">
+          <label class="custom-control-label" for="happy4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="happy5" name="happy" [(ngModel)]="sf36Form.happy"
+            value="5">
+          <label class="custom-control-label" for="happy5"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>i. Ste bili umorni?</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tired1" name="tired" [(ngModel)]="sf36Form.tired"
+            value="1">
+          <label class="custom-control-label" for="tired1"></label>
+        </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tired2" name="tired" [(ngModel)]="sf36Form.tired"
+            value="2">
+          <label class="custom-control-label" for="tired2"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tired3" name="tired" [(ngModel)]="sf36Form.tired"
+            value="3">
+          <label class="custom-control-label" for="tired3"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tired4" name="tired" [(ngModel)]="sf36Form.tired"
+            value="4">
+          <label class="custom-control-label" for="tired4"></label></div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tired5" name="tired" [(ngModel)]="sf36Form.tired"
+            value="5">
+          <label class="custom-control-label" for="tired5"></label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+    <tr>
+        <th style="width: 50%">10.	Da li su tokom prethodne 4 sedmice Vaše fizičko zdravlje ili emocionalni problemi uticali na Vaše socijalne aktivnosti (kao što su posećivanje prijatelja, rođaka itd)?</th>
+        <th>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities1" name="chronicallyLimitingActivities"
+              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="1">
+            <label class="custom-control-label" for="chronicallyLimitingActivities1">Sve vreme</label>
+          </div>
+        </th>
+        <th>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities2" name="chronicallyLimitingActivities"
+              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="2">
+            <label class="custom-control-label" for="chronicallyLimitingActivities2">Većinu vremena</label></div>
+        </th>
+        <th>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities3" name="chronicallyLimitingActivities"
+              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="3">
+            <label class="custom-control-label" for="chronicallyLimitingActivities3">Ponekad</label></div>
+        </th>
+        <th>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities4" name="chronicallyLimitingActivities"
+              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="4">
+            <label class="custom-control-label" for="chronicallyLimitingActivities4">Retko</label></div>
+        </th>
+        <th>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="chronicallyLimitingActivities5" name="chronicallyLimitingActivities"
+              [(ngModel)]="sf36Form.chronicallyLimitingActivities" value="5">
+            <label class="custom-control-label" for="chronicallyLimitingActivities5">Nikako</label></div>
+        </th>
+      </tr>
+</table>

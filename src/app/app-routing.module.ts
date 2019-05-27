@@ -5,6 +5,7 @@ import { NewPatientComponent } from './components/new-patient/new-patient.compon
 import { SarcFComponent } from './components/sarc-f/sarc-f.component';
 import { EqD5Component } from './components/eq-d5/eq-d5.component';
 import { GdsSrbComponent } from './components/gds-srb/gds-srb.component';
+import { Sf36Component } from './components/sf36/sf36.component';
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'gds-srb',
         component: GdsSrbComponent
+    },
+    {
+        path: 'sf36',
+        component: Sf36Component
     }
 ];
 
