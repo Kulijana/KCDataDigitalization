@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MmseForm } from '../../classes/mmse-form';
 
 @Component({
   selector: 'app-mmse',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MmseComponent implements OnInit {
 
+  mmseForm: MmseForm = new MmseForm();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  save(){
+    console.dir(this.mmseForm);
+  }
 }

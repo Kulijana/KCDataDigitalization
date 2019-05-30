@@ -1,3 +1,86 @@
 <table class="table table-bordered table-dark">
-  <!-- TODO check if there should be only points-->
+  <thead>
+    <tr>
+      <th>Skor</th>
+      <th>Orijentacija</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.orientationTime" type="text"></th>
+      <th>Koja je (godina) (god. doba) (mesec) (datum) (dan)? (Jedan poen za svaki tačan odgovor, maksimum 5 poena)</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.orientationLocation" type="text"></th>
+      <th>Gde de nalazimo? (država) (republika) (grad) (bolnica) (sprat) (Skoruj kao prethodnom zadatku).</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Upamćivanje</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.memoryObjects" type="text"></th>
+      <th>Ispitivač imenuje 3 predmeta. Zatim zahteva od bolesnika da ponovi sva 3 naziva.</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.memoryAttempts" type="text"></th>
+      <th>Jedan poen zahteva od bolesnika odgovor, maksimum 3 poena. Nastaviti sa ponavljanjem sve dok ih ne nauči. Zapisati broj pokušaja.</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Pažnja i računanje</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.calculation" type="text"></th>
+      <th>Serija 100-7. Jedan poen dati za svaki tač an odgovor (93, 86, 79, 72, 65, - 
+        stop). Ili, koliko bolesnik ne može da izvede prethodni zadatak, neka 
+        izgovori reč "vrata" unazad. Skoruje se broj izgovorenih glasova u pravilnom
+         redosledu. (Napr. a t a v r + 3). Maksimum 5 poena.
+        </th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Odloženo pamćenje</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.memoryDelayed" type="text"></th>
+      <th>Bolesnik treba da ponovi reči koje je prethodno upamtio. (Jedan poen za svaku tačnu reč).</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Govorni testovi</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.speechNaming" type="text"></th>
+      <th>Imenovanje - olovka, sat (2 poena).</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.speechRepetition" type="text"></th>
+      <th>Ponavljanje - "Prva srpska artiljeriska brigada" (1 poen)</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.speechTripleOrder" type="text"></th>
+      <th>Izvođenje trostrukog naloga: "Desnom rukom uzmite hartiju presavijete je napola i bacite na pod". (3 poena).</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.speechReading" type="text"></th>
+      <th>Čitanje - Na listu hartije napisati nalog "zatvorite oči" dovoljno krupnim slovima da bolesnik jasno vidi. Zahtevati da pročita i da uradi to što je napisano. (1 poen).</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.writing" type="text"></th>
+      <th>Pisanje - "Na ovom listu hartije napišite jednu rečenicu, koju ste sami smislili". Rečenica  mora  imati  smisao.  Pravilna  gramatika  i  interpunkcija  nisu neophodne(1 poen).</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Crtanje</th>
+    </tr>
+    <tr>
+      <th><input [(ngModel)]="mmseForm.drawing" type="text"></th>
+      <th>Precrtavanje uzorka geometrijske figure (dva petougla) što je moguće. Dva
+        petougla se moraju presecati i moraju biti prisutni svi uglovi. Tremor i rotacija
+        se zanemaruju. (1 poen).</th>
+    </tr>
+  </tbody>
 </table>
+
+<button (click)="save()">Save</button>

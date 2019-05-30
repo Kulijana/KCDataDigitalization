@@ -32,4 +32,12 @@ export class HomeComponent implements OnInit {
   gotoSF36(){
     this.router.navigateByUrl('/sf36');
   }
+
+  gotoMmse(){
+    this.router.navigateByUrl('/mmse');
+  }
+
+  gotoIpaq(){
+    this.router.navigateByUrl('/ipaq');
+  }
 }

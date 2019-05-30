@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IpaqForm } from '../../classes/ipaq-form';
 
 @Component({
   selector: 'app-ipaq',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IpaqComponent implements OnInit {
 
+  ipaqForm: IpaqForm = new IpaqForm();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  save(){
+    console.dir(this.ipaqForm);
+  }
 }
