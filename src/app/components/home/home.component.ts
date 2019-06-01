@@ -40,4 +40,8 @@ export class HomeComponent implements OnInit {
   gotoIpaq(){
     this.router.navigateByUrl('/ipaq');
   }
+
+  gotoSarQol(){
+    this.router.navigateByUrl('/sar-qol');
+  }
 }
