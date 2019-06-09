@@ -10,6 +10,7 @@ import { MmseComponent } from './components/mmse/mmse.component';
 import { IpaqComponent } from './components/ipaq/ipaq.component';
 import { SarQolComponent } from './components/sar-qol/sar-qol.component';
 import { SppbComponent } from './components/sppb/sppb.component';
+import { MnaComponent } from './components/mna/mna.component';
 
 const routes: Routes = [
     {
@@ -51,6 +52,10 @@ const routes: Routes = [
     {
         path: 'sppb',
         component: SppbComponent
+    },
+    {
+        path: 'mna',
+        component: MnaComponent
     }
 ];
 

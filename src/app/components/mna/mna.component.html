@@ -1,0 +1,430 @@
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>1. Body Mass Index(BMI) telesna težina/telesna visina*2</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bmi1" name="bmi" [(ngModel)]="mnaForm.bmi" value="0">
+        <label class="custom-control-label" for="bmi1">a. BMI &lt; 19=0 bodova</label> </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bmi2" name="bmi" [(ngModel)]="mnaForm.bmi" value="1">
+        <label class="custom-control-label" for="bmi2">b. BMI 19 do &lt; 21=1 bod</label> </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bmi3" name="bmi" [(ngModel)]="mnaForm.bmi" value="2">
+        <label class="custom-control-label" for="bmi3">c. BMI 21 do &lt; 23=2 boda</label> </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="bmi4" name="bmi" [(ngModel)]="mnaForm.bmi" value="3">
+        <label class="custom-control-label" for="bmi4">d. BMI &ge; 23 = 3 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tbody>
+    <tr>
+      <th>2. Obim nadlaktice(cm)</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="upperArmSize1" name="upperArmSize"
+            [(ngModel)]="mnaForm.upperArmSize" value="0">
+          <label class="custom-control-label" for="upperArmSize1">a. &lt; 21=0.0 bodova</label> </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="upperArmSize2" name="upperArmSize"
+            [(ngModel)]="mnaForm.upperArmSize" value="0.5">
+          <label class="custom-control-label" for="upperArmSize2">b. &lt; 21 = 22=0.5 bodova</label> </div>
+      </th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="upperArmSize3" name="upperArmSize"
+            [(ngModel)]="mnaForm.upperArmSize" value="1">
+          <label class="custom-control-label" for="upperArmSize3">c. &gt; 22 = 1.0 bodova</label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>3. Obim potkolenice</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="shinSize1" name="shinSize" [(ngModel)]="mnaForm.shinSize"
+          value="0">
+        <label class="custom-control-label" for="shinSize1">a. &lt; 31 = 0 bodova </label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="shinSize2" name="shinSize" [(ngModel)]="mnaForm.shinSize"
+          value="0.5">
+        <label class="custom-control-label" for="shinSize2">b. &ge; 31 = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>4. Gubitak težine u poslednja 3 meseca</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="weightLoss1" name="weightLoss"
+          [(ngModel)]="mnaForm.weightLoss" value="0">
+        <label class="custom-control-label" for="weightLoss1">a. 3kg = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="weightLoss2" name="weightLoss"
+          [(ngModel)]="mnaForm.weightLoss" value="1">
+        <label class="custom-control-label" for="weightLoss2">b. nepoznat = 1 bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="weightLoss3" name="weightLoss"
+          [(ngModel)]="mnaForm.weightLoss" value="2">
+        <label class="custom-control-label" for="weightLoss3">c. 1 - 3 kg = 2 boda</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="weightLoss4" name="weightLoss"
+          [(ngModel)]="mnaForm.weightLoss" value="3">
+        <label class="custom-control-label" for="weightLoss4">d. bez gubitka = 3 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>5. Živi samostalno(ne u bolnici ili staračkom domu)</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="livingAlone1" name="livingAlone"
+          [(ngModel)]="mnaForm.livingAlone" value="0">
+        <label class="custom-control-label" for="livingAlone1">a. ne = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="livingAlone2" name="livingAlone"
+          [(ngModel)]="mnaForm.livingAlone" value="1">
+        <label class="custom-control-label" for="livingAlone2">b. da = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>6. Koristi više od 3 prepisana leka dnevno</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="moreThan3Meds1" name="moreThan3Meds"
+          [(ngModel)]="mnaForm.moreThan3Meds" value="0">
+        <label class="custom-control-label" for="moreThan3Meds1">a. da = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="moreThan3Meds2" name="moreThan3Meds"
+          [(ngModel)]="mnaForm.moreThan3Meds" value="1">
+        <label class="custom-control-label" for="moreThan3Meds2">b. ne = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>7. Imao/la sam psihički stres ili akutno oboljenje u poslednja 3 meseca</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="mentalStress1" name="mentalStress"
+          [(ngModel)]="mnaForm.mentalStress" value="0">
+        <label class="custom-control-label" for="mentalStress1">a. da = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="mentalStress2" name="mentalStress"
+          [(ngModel)]="mnaForm.mentalStress" value="1">
+        <label class="custom-control-label" for="mentalStress2">b. ne = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>8. Pokretljivost</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="mobility1" name="mobility" [(ngModel)]="mnaForm.mobility"
+          value="0">
+        <label class="custom-control-label" for="mobility1">a. na nivou kreveta ili stolice = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="mobility2" name="mobility" [(ngModel)]="mnaForm.mobility"
+          value="1">
+        <label class="custom-control-label" for="mobility2">b. ustaje iz kreveta/stolice ali ne izlazi iz kuće = 1
+          bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="mobility3" name="mobility" [(ngModel)]="mnaForm.mobility"
+          value="2">
+        <label class="custom-control-label" for="mobility3">c. izlazi iz kuće = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>9. Neuropsihijatrijski problemi</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="neuropsychiatricProblems1" name="neuropsychiatricProblems"
+          [(ngModel)]="mnaForm.neuropsychiatricProblems" value="0">
+        <label class="custom-control-label" for="neuropsychiatricProblems1">a. teška demencija ili depresija = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="neuropsychiatricProblems2" name="neuropsychiatricProblems"
+          [(ngModel)]="mnaForm.neuropsychiatricProblems" value="1">
+        <label class="custom-control-label" for="neuropsychiatricProblems2">b. blaga demencija = 1 bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="neuropsychiatricProblems3" name="neuropsychiatricProblems"
+          [(ngModel)]="mnaForm.neuropsychiatricProblems" value="2">
+        <label class="custom-control-label" for="neuropsychiatricProblems3">c. bez psiholoških problema = 2 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>10. Dekubitusi</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="decubitus1" name="decubitus"
+          [(ngModel)]="mnaForm.decubitus" value="0">
+        <label class="custom-control-label" for="decubitus1">a. da = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="decubitus2" name="decubitus"
+          [(ngModel)]="mnaForm.decubitus" value="1">
+        <label class="custom-control-label" for="decubitus2">b. ne = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>11. Koliko kompletnih obroka dnevno pacijenat jede?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="completeMeals1" name="completeMeals"
+          [(ngModel)]="mnaForm.completeMeals" value="0">
+        <label class="custom-control-label" for="completeMeals1">a. 1 obrok = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="completeMeals2" name="completeMeals"
+          [(ngModel)]="mnaForm.completeMeals" value="1">
+        <label class="custom-control-label" for="completeMeals2">b. 2 obroka = 1 bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="completeMeals3" name="completeMeals"
+          [(ngModel)]="mnaForm.completeMeals" value="2">
+        <label class="custom-control-label" for="completeMeals3">c. 3 obroka = 2 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>12. Konzumiranje određenih namirnica kao marker unosa proteina</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingProtein1" name="consumingProtein"
+          [(ngModel)]="mnaForm.consumingProtein" value="0">
+        <label class="custom-control-label" for="consumingProtein1">a. 0 ili 1 da = 0.0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingProtein2" name="consumingProtein"
+          [(ngModel)]="mnaForm.consumingProtein" value="1">
+        <label class="custom-control-label" for="consumingProtein2">b. 2 da = 0.5 bodova</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingProtein3" name="consumingProtein"
+          [(ngModel)]="mnaForm.consumingProtein" value="2">
+        <label class="custom-control-label" for="consumingProtein3">c. 3 da = 1.0 bodova</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>13. Konzumiranje voća i povrća ili više puta dnevno?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingFruit1" name="consumingFruit"
+          [(ngModel)]="mnaForm.consumingFruit" value="0">
+        <label class="custom-control-label" for="consumingFruit1">a. ne = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingFruit2" name="consumingFruit"
+          [(ngModel)]="mnaForm.consumingFruit" value="1">
+        <label class="custom-control-label" for="consumingFruit2">b. da = 1 bod</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>14. Da li je unos hrane u poslednja 3 meseca smanjen zbog gupitka apetita, problema sa varenjem, žvakanjem ili gutanjem?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingReduction1" name="consumingReduction"
+          [(ngModel)]="mnaForm.consumingReduction" value="0">
+        <label class="custom-control-label" for="consumingReduction1">a. težak gubitak apetita = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingReduction2" name="consumingReduction"
+          [(ngModel)]="mnaForm.consumingReduction" value="1">
+        <label class="custom-control-label" for="consumingReduction2">b. blag gubitak apetita = 1 bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingReduction3" name="consumingReduction"
+          [(ngModel)]="mnaForm.consumingReduction" value="2">
+        <label class="custom-control-label" for="consumingReduction3">c. bez gubitka apetita = 2 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>15. Koliko tečnosti(voda, kafa, sok, čaj, mleko) konzumira u toku dana?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingLiquid1" name="consumingLiquid"
+          [(ngModel)]="mnaForm.consumingLiquid" value="0">
+        <label class="custom-control-label" for="consumingLiquid1">a. manje od tri šolje = 0.0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingLiquid2" name="consumingLiquid"
+          [(ngModel)]="mnaForm.consumingLiquid" value="1">
+        <label class="custom-control-label" for="consumingLiquid2">b. 3 do 5 šolja = 0.5 bodova</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingLiquid3" name="consumingLiquid"
+          [(ngModel)]="mnaForm.consumingLiquid" value="3">
+        <label class="custom-control-label" for="consumingLiquid3">c. više od 5 šolja = 1.0 bodova</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>16. Način unosa hrane</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingMethod1" name="consumingMethod"
+          [(ngModel)]="mnaForm.consumingMethod" value="0">
+        <label class="custom-control-label" for="consumingMethod1">a. nemoguć unos bez tuđe pomoći = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingMethod2" name="consumingMethod"
+          [(ngModel)]="mnaForm.consumingMethod" value="1">
+        <label class="custom-control-label" for="consumingMethod2">b. samostalan unos uz malo teškoća = 1 bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingMethod3" name="consumingMethod"
+          [(ngModel)]="mnaForm.consumingMethod" value="2">
+        <label class="custom-control-label" for="consumingMethod3">c. samostalan unos = 2 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>17. Da li pacijent smatra da ima problem sa uhranjenošću?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingProblems1" name="consumingProblems"
+          [(ngModel)]="mnaForm.consumingProblems" value="0">
+        <label class="custom-control-label" for="consumingProblems1">a. smatra da ima težak problem = 0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingProblems2" name="consumingProblems"
+          [(ngModel)]="mnaForm.consumingProblems" value="1">
+        <label class="custom-control-label" for="consumingProblems2">b. ne zna ili smatra da ima umeren problem = 1 bod</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="consumingProblems3" name="consumingProblems"
+          [(ngModel)]="mnaForm.consumingProblems" value="2">
+        <label class="custom-control-label" for="consumingProblems3">c. nema problem = 2 boda</label></div>
+    </th>
+  </tr>
+</table>
+
+<table class="table table-bordered table-dark">
+  <tr>
+    <th>18. Kako vide svoj zdravstveni status u poređenju sa drugim osobama iste starosne dobi?</th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthObservation1" name="healthObservation"
+          [(ngModel)]="mnaForm.healthObservation" value="0">
+        <label class="custom-control-label" for="healthObservation1">a. ne tako dobar kao kod drugih = 0.0 bodova</label>
+      </div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthObservation2" name="healthObservation"
+          [(ngModel)]="mnaForm.healthObservation" value="0.5">
+        <label class="custom-control-label" for="healthObservation2">b. ne zna = 0.5 bodova</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthObservation3" name="healthObservation"
+          [(ngModel)]="mnaForm.healthObservation" value="1">
+        <label class="custom-control-label" for="healthObservation3">c. jednako dobar kao i kod drugih = 1.0 bodova</label></div>
+    </th>
+    <th>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="healthObservation4" name="healthObservation"
+          [(ngModel)]="mnaForm.healthObservation" value="2">
+        <label class="custom-control-label" for="healthObservation4">d. bolji nego kod drugih = 2.0 bodova</label></div>
+    </th>
+  </tr>
+</table>

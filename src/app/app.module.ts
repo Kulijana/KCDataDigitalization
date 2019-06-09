@@ -27,6 +27,7 @@ import { IpaqComponent } from './components/ipaq/ipaq.component';
 import { Sf36Component } from './components/sf36/sf36.component';
 import { SarQolComponent } from './components/sar-qol/sar-qol.component';
 import { SppbComponent } from './components/sppb/sppb.component';
+import { MnaComponent } from './components/mna/mna.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     IpaqComponent,
     Sf36Component,
     SarQolComponent,
-    SppbComponent
+    SppbComponent,
+    MnaComponent
   ],
   imports: [
     BrowserModule,

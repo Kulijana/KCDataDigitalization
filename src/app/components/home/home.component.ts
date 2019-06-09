@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/sppb');
   }
 
-  gotoMne(){
-    this.router.navigateByUrl('/mne')
+  gotoMna(){
+    this.router.navigateByUrl('/mna')
   }
 }
