@@ -26,6 +26,7 @@ import { GdsSrbComponent } from './components/gds-srb/gds-srb.component';
 import { IpaqComponent } from './components/ipaq/ipaq.component';
 import { Sf36Component } from './components/sf36/sf36.component';
 import { SarQolComponent } from './components/sar-qol/sar-qol.component';
+import { SppbComponent } from './components/sppb/sppb.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     GdsSrbComponent,
     IpaqComponent,
     Sf36Component,
-    SarQolComponent
+    SarQolComponent,
+    SppbComponent
   ],
   imports: [
     BrowserModule,

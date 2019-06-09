@@ -1,0 +1,576 @@
+<table class="table table-bordered table-dark">
+  <tbody>
+    <tr>
+      <th>A. Side-by-side-stand</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <th>Held for 10 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="sideBySideStand1" name="sideBySideStand"
+            [(ngModel)]="sppbForm.sideBySideStand" value="1">
+          <label class="custom-control-label" for="sideBySideStand1">1 point</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not held for 10 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="sideBySideStand2" name="sideBySideStand"
+            [(ngModel)]="sppbForm.sideBySideStand" value="2">
+          <label class="custom-control-label" for="sideBySideStand2">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="sideBySideStand3" name="sideBySideStand"
+            [(ngModel)]="sppbForm.sideBySideStand" value="3">
+          <label class="custom-control-label" for="sideBySideStand3">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Number of seconds held if less than 10 seconds:</th>
+      <th><input type="text" [(ngModel)]="sppbForm.sideBySideStandLess" [disabled]="sppbForm.sideBySideStand != 2"></th>
+    </tr>
+    <tr>
+      <th>B. Semi-Tandem Stand</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <th>Held for 10 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="semiTandemStand1" name="semiTandemStand"
+            [(ngModel)]="sppbForm.semiTandemStand" value="1">
+          <label class="custom-control-label" for="semiTandemStand1">1 point</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not held for 10 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="semiTandemStand2" name="semiTandemStand"
+            [(ngModel)]="sppbForm.semiTandemStand" value="2">
+          <label class="custom-control-label" for="semiTandemStand2">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="semiTandemStand3" name="semiTandemStand"
+            [(ngModel)]="sppbForm.semiTandemStand" value="3">
+          <label class="custom-control-label" for="semiTandemStand3">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>C. Tandem Stand</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <th>Held for 10 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tandemStand1" name="tandemStand"
+            [(ngModel)]="sppbForm.tandemStand" value="1">
+          <label class="custom-control-label" for="tandemStand1">2 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Held for 3 to 9.99 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tandemStand2" name="tandemStand"
+            [(ngModel)]="sppbForm.tandemStand" value="2">
+          <label class="custom-control-label" for="tandemStand2">1 point</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Held for less than 3 seconds</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tandemStand3" name="tandemStand"
+            [(ngModel)]="sppbForm.tandemStand" value="3">
+          <label class="custom-control-label" for="tandemStand3">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="tandemStand4" name="tandemStand"
+            [(ngModel)]="sppbForm.tandemStand" value="4">
+          <label class="custom-control-label" for="tandemStand4">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Number of seconds held if less than 10 seconds:</th>
+      <th><input type="text" [(ngModel)]="sppbForm.tandemStandLess"
+          [disabled]="sppbForm.tandemStand != 2 && sppbForm.tandemStand != 3"></th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>Gait speed test scoring</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1. Time for 4 meters</th>
+      <th><input type="text" [(ngModel)]="sppbForm.gaitSpeedTime"></th>
+    </tr>
+    <tr>
+      <th>2, If participant did not attempt test or failed, circle why:</th>
+    </tr>
+    <tr>
+      <th>Tried but unable</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason1" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="1">
+          <label class="custom-control-label" for="gaitSpeedFailReason1">1</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant could not walk unassisted</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason2" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="2">
+          <label class="custom-control-label" for="gaitSpeedFailReason2">2</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted, you felt unsafe</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason3" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="3">
+          <label class="custom-control-label" for="gaitSpeedFailReason3">3</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted, participant felt unsafe</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason4" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="4">
+          <label class="custom-control-label" for="gaitSpeedFailReason4">4</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant unable to understand instructions</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason5" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="5">
+          <label class="custom-control-label" for="gaitSpeedFailReason5">5</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Other(specify)</th>
+      <th>
+        <input type="text" [(ngModel)]="sppbForm.gaitSpeedFailReasonOther"
+          [disabled]="sppbForm.gaitSpeedFailReason != 6">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason6" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="6">
+          <label class="custom-control-label" for="gaitSpeedFailReason6">6</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant refused</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedFailReason7" name="gaitSpeedFailReason"
+            [(ngModel)]="sppbForm.gaitSpeedFailReason" value="7">
+          <label class="custom-control-label" for="gaitSpeedFailReason7">7</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>3. Aids for walking</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedAids1" name="gaitSpeedAids"
+            [(ngModel)]="sppbForm.gaitSpeedAids" value="1">
+          <label class="custom-control-label" for="gaitSpeedAids1">None</label></div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedAids2" name="gaitSpeedAids"
+            [(ngModel)]="sppbForm.gaitSpeedAids" value="2">
+          <label class="custom-control-label" for="gaitSpeedAids2">Cane</label></div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedAids3" name="gaitSpeedAids"
+            [(ngModel)]="sppbForm.gaitSpeedAids" value="3">
+          <label class="custom-control-label" for="gaitSpeedAids3">Other</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>For 4-Meter Walk:</th>
+    </tr>
+    <tr>
+      <th>If time is more than 8.70 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedPoints1" name="gaitSpeedPoints"
+            [(ngModel)]="sppbForm.gaitSpeedPoints" value="1">
+          <label class="custom-control-label" for="gaitSpeedPoints1">1 point</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If time is 6.21 to 8.70 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedPoints2" name="gaitSpeedPoints"
+            [(ngModel)]="sppbForm.gaitSpeedPoints" value="2">
+          <label class="custom-control-label" for="gaitSpeedPoints2">2 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If time is 4.82 to 6.20 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedPoints3" name="gaitSpeedPoints"
+            [(ngModel)]="sppbForm.gaitSpeedPoints" value="3">
+          <label class="custom-control-label" for="gaitSpeedPoints3">3 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If time is less than 4.82 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gaitSpeedPoints4" name="gaitSpeedPoints"
+            [(ngModel)]="sppbForm.gaitSpeedPoints" value="4">
+          <label class="custom-control-label" for="gaitSpeedPoints4">4 points</label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>Single Chair Stand Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A. Safe to stand without help</th>
+      <th>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="singeChairSafe1" name="singeChairSafe"
+            [(ngModel)]="sppbForm.singeChairSafe" value="true">
+          <label class="custom-control-label" for="singeChairSafe1">YES</label></div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="singeChairSafe2" name="singeChairSafe"
+            [(ngModel)]="sppbForm.singeChairSafe" value="false">
+          <label class="custom-control-label" for="singeChairSafe2">NO</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Results:</th>
+    </tr>
+    <tr>
+      <th>Participant stood without using arms</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairResult1" name="singleChairResult"
+            [(ngModel)]="sppbForm.singleChairResult" value="1">
+          <label class="custom-control-label" for="singleChairResult1"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant used arms to stand</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairResult2" name="singleChairResult"
+            [(ngModel)]="sppbForm.singleChairResult" value="2">
+          <label class="custom-control-label" for="singleChairResult2"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Test not completed</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairResult3" name="singleChairResult"
+            [(ngModel)]="sppbForm.singleChairResult" value="3">
+          <label class="custom-control-label" for="singleChairResult3"></label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If participant did not attempt test or failed, circle why:</th>
+    </tr>
+    <tr>
+      <th>Tried but unable</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason1" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="1">
+          <label class="custom-control-label" for="singleChairFailReason1">1</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant could not stand unassisted</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason2" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="2">
+          <label class="custom-control-label" for="singleChairFailReason2">2</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted, you felt unsafe</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason3" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="3">
+          <label class="custom-control-label" for="singleChairFailReason3">3</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attemted, participant felt unsafe</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason4" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="4">
+          <label class="custom-control-label" for="singleChairFailReason4">4</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant unable to understand instructions</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason5" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="5">
+          <label class="custom-control-label" for="singleChairFailReason5">5</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Other</th>
+      <th>
+        <input type="text" [(ngModel)]="sppbForm.singleChairFailReasonOther"
+          [disabled]="sppbForm.singleChairFailReason != 6">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason6" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="6">
+          <label class="custom-control-label" for="singleChairFailReason6">6</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant refused</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="singleChairFailReason7" name="singleChairFailReason"
+            [(ngModel)]="sppbForm.singleChairFailReason" value="7">
+          <label class="custom-control-label" for="singleChairFailReason7">7</label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>Repeated Chair Stand Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A. Safe to stand five times</th>
+      <th>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="repeatedChairSafe1" name="repeatedChairSafe"
+            [(ngModel)]="sppbForm.repeatedChairSafe" value="true">
+          <label class="custom-control-label" for="repeatedChairSafe1">YES</label></div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="repeatedChairSafe2" name="repeatedChairSafe"
+            [(ngModel)]="sppbForm.repeatedChairSafe" value="false">
+          <label class="custom-control-label" for="repeatedChairSafe2">NO</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>B. If five stands done successfully, record time in seconds.</th>
+      <th>Time to complete five stands(seconds). <input type="text" [(ngModel)]="sppbForm.repeatedChairResult"></th>
+    </tr>
+    <tr>
+      <th>If participant did not attempt test or failed, circle why:</th>
+    </tr>
+    <tr>
+      <th>Tried but unable</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason1" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="1">
+          <label class="custom-control-label" for="repeatedChairFailReason1">1</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant could not stand unassisted</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason2" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="2">
+          <label class="custom-control-label" for="repeatedChairFailReason2">2</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted, you felt unsafe</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason3" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="3">
+          <label class="custom-control-label" for="repeatedChairFailReason3">3</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Not attempted, participant felt unsafe</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason4" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="4">
+          <label class="custom-control-label" for="repeatedChairFailReason4">4</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant unable to understand instructions</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason5" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="5">
+          <label class="custom-control-label" for="repeatedChairFailReason5">5</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Other</th>
+      <th>
+        <input type="text" [(ngModel)]="sppbForm.repeatedChairFailReasonOther"
+          [disabled]="sppbForm.repeatedChairFailReason != 6">
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason6" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="6">
+          <label class="custom-control-label" for="repeatedChairFailReason6">6</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>Participant refuzed</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairFailReason7" name="repeatedChairFailReason"
+            [(ngModel)]="sppbForm.repeatedChairFailReason" value="7">
+          <label class="custom-control-label" for="repeatedChairFailReason7">7</label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>Scoring the Repeated Chair Test</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Participant unable to complete 5 chair stands or completes stands in more than 60 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairPoints0" name="repeatedChairPoints"
+            [(ngModel)]="sppbForm.repeatedChairPoints" value="7">
+          <label class="custom-control-label" for="repeatedChairPoints0">0 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If chair stand time is 16.70 seconds or more:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairPoints1" name="repeatedChairPoints"
+            [(ngModel)]="sppbForm.repeatedChairPoints" value="1">
+          <label class="custom-control-label" for="repeatedChairPoints1">1 point</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If chair stand time is 13.70 to 16.69 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairPoints2" name="repeatedChairPoints"
+            [(ngModel)]="sppbForm.repeatedChairPoints" value="2">
+          <label class="custom-control-label" for="repeatedChairPoints2">2 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If chair stand time is 11.20 to 13.69 seconds:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairPoints3" name="repeatedChairPoints"
+            [(ngModel)]="sppbForm.repeatedChairPoints" value="3">
+          <label class="custom-control-label" for="repeatedChairPoints3">3 points</label></div>
+      </th>
+    </tr>
+    <tr>
+      <th>If chair stand time is 11.19 seconds or less:</th>
+      <th>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="repeatedChairPoints4" name="repeatedChairPoints"
+            [(ngModel)]="sppbForm.repeatedChairPoints" value="4">
+          <label class="custom-control-label" for="repeatedChairPoints4">4 points</label></div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>Scoring for Complete Short Physical Performance Battery</th>
+      <th>//TODO Generate score values</th>
+    </tr>
+  </thead>
+</table>
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th>Dinamometar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Desna ruka</th>
+      <th><input type="text" [(ngModel)]="sppbForm.rightArm"></th>
+    </tr>
+    <tr>
+      <th>Leva ruka</th>
+      <th><input type="text" [(ngModel)]="sppbForm.leftArm"></th>
+    </tr>
+    <tr>
+      <th>Obim leve nadlaktice</th>
+      <th><input type="text" [(ngModel)]="sppbForm.upperLeftArm"></th>
+    </tr>
+    <tr>
+      <th>Obim desne nadlaktice</th>
+      <th><input type="text" [(ngModel)]="sppbForm.upperRightArm"></th>
+    </tr>
+    <tr>
+      <th>Obim leve potkolenice</th>
+      <th><input type="text" [(ngModel)]="sppbForm.leftShin"></th>
+    </tr>
+    <tr>
+      <th>Obim desne potkolenice</th>
+      <th><input type="text" [(ngModel)]="sppbForm.rightShin"></th>
+    </tr>
+    <tr>
+      <th>Raspon ruku</th>
+      <th><input type="text" [(ngModel)]="sppbForm.handRange"></th>
+    </tr>
+    <tr>
+      <th>Obim struka</th>
+      <th><input type="text" [(ngModel)]="sppbForm.waistSize"></th>
+    </tr>
+  </tbody>
+</table>

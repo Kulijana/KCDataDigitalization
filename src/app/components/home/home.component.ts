@@ -44,4 +44,12 @@ export class HomeComponent implements OnInit {
   gotoSarQol(){
     this.router.navigateByUrl('/sar-qol');
   }
+
+  gotoSppb(){
+    this.router.navigateByUrl('/sppb');
+  }
+
+  gotoMne(){
+    this.router.navigateByUrl('/mne')
+  }
 }

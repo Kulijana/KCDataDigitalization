@@ -9,6 +9,7 @@ import { Sf36Component } from './components/sf36/sf36.component';
 import { MmseComponent } from './components/mmse/mmse.component';
 import { IpaqComponent } from './components/ipaq/ipaq.component';
 import { SarQolComponent } from './components/sar-qol/sar-qol.component';
+import { SppbComponent } from './components/sppb/sppb.component';
 
 const routes: Routes = [
     {
@@ -46,6 +47,10 @@ const routes: Routes = [
     {
         path: 'sar-qol',
         component: SarQolComponent
+    },
+    {
+        path: 'sppb',
+        component: SppbComponent
     }
 ];
 
