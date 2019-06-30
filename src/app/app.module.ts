@@ -3,6 +3,7 @@ import '../polyfills';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from "@angular/http";
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -28,6 +29,8 @@ import { Sf36Component } from './components/sf36/sf36.component';
 import { SarQolComponent } from './components/sar-qol/sar-qol.component';
 import { SppbComponent } from './components/sppb/sppb.component';
 import { MnaComponent } from './components/mna/mna.component';
+import { PatientViewComponent } from './components/patient-view/patient-view.component';
+import { PatientService } from './services/patient.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -48,13 +51,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     Sf36Component,
     SarQolComponent,
     SppbComponent,
-    MnaComponent
+    MnaComponent,
+    PatientViewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    HttpModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -63,7 +68,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, PatientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

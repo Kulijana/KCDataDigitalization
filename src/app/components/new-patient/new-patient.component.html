@@ -1,4 +1,4 @@
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <tr>
     <th style="width: 30%">Broj</th>
     <th><input type="text" class="form-control" [(ngModel)]="patient.number"></th>
@@ -45,7 +45,6 @@
   </tr>
   <tr>
     <th>Stepen obrazovanja</th>
-    <!-- TODO properly rename the classes -->
     <th><div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="stepenObrazovanja4Razreda" name="stepenObrazovanja" 
         [(ngModel)]="patient.educationLevel" value="4grades">
@@ -206,4 +205,4 @@
   </tr>
 </table>
 
-<button class="btn btn-primary" (click)="savePatient()">Save</button>
+<button class="btn btn-primary" (click)="savePatient()">Sačuvaj</button>

@@ -1,0 +1,136 @@
+<table class="table table bordered">
+  <tr>
+    <th>Broj</th>
+    <th>{{patient.basicPatient.number}}</th>
+  </tr>
+  <tr>
+    <th>Ime i prezime</th>
+    <th>{{patient.basicPatient.nameSurname}}</th>
+  </tr>
+  <tr>
+    <th>Jmbg</th>
+    <th>{{patient.basicPatient.jmbg}}</th>
+  </tr>
+</table>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Anketa</th>
+      <th>Status</th>
+      <th>Unos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Osnovna anketa</th>
+      <th>
+        <label *ngIf="patient.basicPatient != null">Ispunjena</label>
+        <label *ngIf="patient.basicPatient == null">Neispunjena</label>
+      </th>
+      <th>
+        <button *ngIf="patient.basicPatient == null" type="button" class="btn btn-primary" routerLink="/new-patient/create">Kreiraj</button>
+        <button *ngIf="patient.basicPatient != null" type="button" class="btn btn-success" routerLink="/new-patient/{{patient.id}}">Izmeni</button>
+      </th>
+    </tr>
+    <tr>
+        <th>SARC-F</th>
+        <th>
+          <label *ngIf="patient.sarcFForm != null">Ispunjena</label>
+          <label *ngIf="patient.sarcFForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.sarcFForm == null" type="button" class="btn btn-primary" routerLink="/sarc-f/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.sarcFForm != null" type="button" class="btn btn-success" routerLink="/sarc-f/{{patient.id}}/edit">Izmeni</button>
+          </th>
+      </tr>
+      <tr>
+        <th>SF 36</th>
+        <th>
+          <label *ngIf="patient.sf36Form != null">Ispunjena</label>
+          <label *ngIf="patient.sf36Form == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.sf36Form == null" type="button" class="btn btn-primary" routerLink="/sf36/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.sf36Form != null" type="button" class="btn btn-success" routerLink="/sf36/{{patient.id}}/edit">Izmeni</button>
+          </th>
+      </tr>
+      <tr>
+        <th>EQ-D5</th>
+        <th>
+          <label *ngIf="patient.eQD5Form != null">Ispunjena</label>
+          <label *ngIf="patient.eQD5Form == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.eQD5Form == null" type="button" class="btn btn-primary" routerLink="/eq-d5/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.eQD5Form != null" type="button" class="btn btn-success" routerLink="/eq-d5/{{patient.id}}/edit">Izmeni</button>
+          </th>
+      </tr>
+      <tr>
+        <th>MMSE</th>
+        <th>
+          <label *ngIf="patient.mmseForm != null">Ispunjena</label>
+          <label *ngIf="patient.mmseForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.mmseForm == null" type="button" class="btn btn-primary" routerLink="/mmse/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.mmseForm != null" type="button" class="btn btn-success" routerLink="/mmse/{{patient.id}}/edit">Izmeni</button>
+          </th>
+      </tr>
+      <tr>
+        <th>GDS-15 SRB</th>
+        <th>
+          <label *ngIf="patient.gdsSrbForm != null">Ispunjena</label>
+          <label *ngIf="patient.gdsSrbForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.gdsSrbForm == null" type="button" class="btn btn-primary" routerLink="/gds-srb/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.gdsSrbForm != null" type="button" class="btn btn-success" routerLink="/gds-srb/{{patient.id}}/edit">Izmeni</button>
+          </th>
+      </tr>
+      <tr>
+        <th>IPAQ</th>
+        <th>
+          <label *ngIf="patient.ipaqForm != null">Ispunjena</label>
+          <label *ngIf="patient.ipaqForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.ipaqForm == null" type="button" class="btn btn-primary" routerLink="/ipaq/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.ipaqForm != null" type="button" class="btn btn-success" routerLink="/ipaq/{{patient.id}}/edit">Izmeni</button>
+        </th>
+      </tr>
+      <tr>
+        <th>SarQol</th>
+        <th>
+          <label *ngIf="patient.sarQolForm != null">Ispunjena</label>
+          <label *ngIf="patient.sarQolForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.sarQolForm == null" type="button" class="btn btn-primary" routerLink="/sar-qol/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.sarQolForm != null" type="button" class="btn btn-success" routerLink="/sar-qol/{{patient.id}}/edit">Izmeni</button>
+        </th>
+      </tr>
+      <tr>
+        <th>SPPB</th>
+        <th>
+          <label *ngIf="patient.sppbForm != null">Ispunjena</label>
+          <label *ngIf="patient.sppbForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.sppbForm == null" type="button" class="btn btn-primary" routerLink="/sppb/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.sppbForm != null" type="button" class="btn btn-success" routerLink="/sppb/{{patient.id}}/edit">Izmeni</button>
+        </th>
+      </tr>
+      <tr>
+        <th>MNA</th>
+        <th>
+          <label *ngIf="patient.MnaForm != null">Ispunjena</label>
+          <label *ngIf="patient.MnaForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.MnaForm == null" type="button" class="btn btn-primary" routerLink="/mna/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.MnaForm != null" type="button" class="btn btn-success" routerLink="/mna/{{patient.id}}/edit">Izmeni</button>
+        </th>
+      </tr>
+  </tbody>
+</table>

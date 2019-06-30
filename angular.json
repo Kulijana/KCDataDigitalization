@@ -38,7 +38,8 @@
               "src/assets/sb2-resources/vendor/datatables/jquery.dataTables.js",
               "src/assets/sb2-resources/vendor/datatables/dataTables.bootstrap4.js",
               "src/assets/sb2-resources/js/sb-admin-2.min.js",
-              "src/assets/sb2-resources/js/demo/datatables-demo.js"
+              "src/assets/sb2-resources/js/demo/datatables-demo.js",
+              "src/assets/js/patientSaver.js"
             ]
           },
           "configurations": {

@@ -11,6 +11,7 @@ import { IpaqComponent } from './components/ipaq/ipaq.component';
 import { SarQolComponent } from './components/sar-qol/sar-qol.component';
 import { SppbComponent } from './components/sppb/sppb.component';
 import { MnaComponent } from './components/mna/mna.component';
+import { PatientViewComponent } from './components/patient-view/patient-view.component';
 
 const routes: Routes = [
     {
@@ -18,43 +19,47 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'new-patient',
+        path: 'patient-view/:id',
+        component: PatientViewComponent
+    },
+    {
+        path: 'new-patient/:action',
         component: NewPatientComponent
     },
     {
-        path: 'sarc-f',
+        path: 'sarc-f/:id/:crud',
         component: SarcFComponent
     },
     {
-        path: 'eq-d5',
+        path: 'eq-d5/:id/:crud',
         component: EqD5Component
     },
     {
-        path: 'gds-srb',
+        path: 'gds-srb/:id/:crud',
         component: GdsSrbComponent
     },
     {
-        path: 'sf36',
+        path: 'sf36/:id/:crud',
         component: Sf36Component
     },
     {
-        path: 'mmse',
+        path: 'mmse/:id/:crud',
         component: MmseComponent
     },
     {
-        path: 'ipaq',
+        path: 'ipaq/:id/:crud',
         component: IpaqComponent
     },
     {
-        path: 'sar-qol',
+        path: 'sar-qol/:id/:crud',
         component: SarQolComponent
     },
     {
-        path: 'sppb',
+        path: 'sppb/:id/:crud',
         component: SppbComponent
     },
     {
-        path: 'mna',
+        path: 'mna/:id/:crud',
         component: MnaComponent
     }
 ];

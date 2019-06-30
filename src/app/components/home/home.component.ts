@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { PatientService } from '../../services/patient.service';
+import { CompletePatient } from '../../classes/complete-patient';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +10,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  patients: CompletePatient[];
+
+  constructor(
+    private router: Router,
+    private patientService: PatientService
+    ) { }
 
   ngOnInit() {
+    this.patientService.getPatients().subscribe(data => this.patients = data);
   }
 
   gotoNewPatient(){
