@@ -1,7 +1,7 @@
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <tr>
     <th style="width: 50%">1.	U poslednjih 7 dana, koliko dana ste upražnjavali napornu fizičku aktivnost kao što je podiznje tereta , kopanje, aerobic ili brza vožnja bicikla ?</th>
-    <th><input [(ngModel)]="ipaqForm.heavyActivityDays" type="text">dana u toku nedelje</th>
+    <th><input [(ngModel)]="ipaqForm.heavyActivityDays" type="number" class="form-control" min=0 max=7>dana u toku nedelje</th>
     <th>
       <div class="form-check">
         <input [(ngModel)]="ipaqForm.heavyActivityNoInfo" type="checkbox" class="form-check-input" id="check1">
@@ -12,8 +12,8 @@
   <tr>
     <th>2.	Koliko vremena  dnevno ste provedili u toj aktivnosti?</th>
     <th>
-      <input [(ngModel)]="ipaqForm.heavyActivityDailyHours" type="text">časova dnevno <br>
-      <input [(ngModel)]="ipaqForm.heavyActivityDailyMinutes" type="text">minuta dnevno<br>
+      <input [(ngModel)]="ipaqForm.heavyActivityDailyHours" type="number" class="form-control">časova dnevno<br>
+      <input [(ngModel)]="ipaqForm.heavyActivityDailyMinutes" type="number" class="form-control">minuta dnevno<br>
     </th>
     <th>
       <div class="form-check">
@@ -24,7 +24,7 @@
   </tr>
   <tr>
     <th>3.	U poslednjih 7 dana, koliko dana ste imali umerenu fizičku aktivnost kao što je nošenje manjeg tereta, vožnje bicikla u normalnom ritm,tenis u dublu. Ne računajte šetnju.</th>
-    <th><input [(ngModel)]="ipaqForm.moderateActivityDays" type="text">dana u nedelji</th>
+    <th><input [(ngModel)]="ipaqForm.moderateActivityDays" type="number" class="form-control" min=0 max=7>dana u nedelji</th>
     <th>
       <div class="form-check">
         <input [(ngModel)]="ipaqForm.moderateAcitivityNoInfo" type="checkbox" class="form-check-input" id="check3">
@@ -35,8 +35,8 @@
   <tr>
     <th>4.	Koliko vremena dnevno ste provodili u toj umerenoj fizičkoj aktivnosti?</th>
     <th>
-      <input [(ngModel)]="ipaqForm.moderateActivityDailyHours" type="text">časova dnevno <br>
-      <input [(ngModel)]="ipaqForm.moderateActivityDailyMinutes" type="text">minuta dnevno<br>
+      <input [(ngModel)]="ipaqForm.moderateActivityDailyHours" type="number" class="form-control">časova dnevno <br>
+      <input [(ngModel)]="ipaqForm.moderateActivityDailyMinutes" type="number" class="form-control">minuta dnevno<br>
     </th>
     <th>
       <div class="form-check">
@@ -47,7 +47,7 @@
   </tr>
   <tr>
     <th>5.	U poslednjih 7 dana, koliko dana ste išli u šetnju dužu od 10 minuta?</th>
-    <th><input [(ngModel)]="ipaqForm.walkingDays" type="text">dana u nedelji</th>
+    <th><input [(ngModel)]="ipaqForm.walkingDays" type="number" class="form-control" min=0 max=7>dana u nedelji</th>
     <th>
       <div class="form-check">
         <input [(ngModel)]="ipaqForm.walkingNoInfo" type="checkbox" class="form-check-input" id="check5">
@@ -58,8 +58,8 @@
   <tr>
     <th>6.	Koliko vremena ste prosečno provodili dnevno u šetnji/ hodu?</th>
     <th>
-      <input [(ngModel)]="ipaqForm.walkingDailyHours" type="text">časova dnevno <br>
-      <input [(ngModel)]="ipaqForm.walkingDailyMinutes" type="text">minuta dnevno<br>
+      <input [(ngModel)]="ipaqForm.walkingDailyHours" type="number" class="form-control">časova dnevno <br>
+      <input [(ngModel)]="ipaqForm.walkingDailyMinutes" type="number" class="form-control">minuta dnevno<br>
     </th>
     <th>
       <div class="form-check">
@@ -71,8 +71,8 @@
   <tr>
     <th>7.	U poslednjih 7 dana, koliko vremena dnevno ste u toku radne nedelje proveli sedeći ?</th>
     <th>
-      <input [(ngModel)]="ipaqForm.sittingDailyHours" type="text">časova dnevno <br>
-      <input [(ngModel)]="ipaqForm.sittingDailyMinutes" type="text">minuta dnevno<br>
+      <input [(ngModel)]="ipaqForm.sittingDailyHours" type="number" class="form-control">časova dnevno <br>
+      <input [(ngModel)]="ipaqForm.sittingDailyMinutes" type="number" class="form-control">minuta dnevno<br>
     </th>
     <th>
       <div class="form-check">
@@ -83,4 +83,4 @@
   </tr>
 </table>
 
-<button (click)="save()" class="btn btn-primary">Save</button>
+<button class="btn btn-primary" (click)="save()" >Sačuvaj</button>

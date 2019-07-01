@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EqD5Form } from '../../classes/eq-d5-form';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PatientService } from '../../services/patient.service';
 import { CompletePatient } from '../../classes/complete-patient';
 
@@ -16,13 +16,13 @@ export class EqD5Component implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private patientService: PatientService
   ) { }
 
   ngOnInit() {
-        // TODO rewrite how the patient is retrieved from the patientSerivice
         const id = +this.route.snapshot.paramMap.get('id');
-        this.patientService.getPatients().subscribe(patients => this.patient = patients.find(p => p.id == id));
+        this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
         const crud = this.route.snapshot.paramMap.get('crud');
         if(crud == "create"){
           this.eqD5Form = new EqD5Form();
@@ -34,8 +34,8 @@ export class EqD5Component implements OnInit {
   }
 
   save(){
-    // TODO actually save...
-    console.dir(this.eqD5Form);
+    this.patientService.updatePatient(this.patient);
+    this.router.navigateByUrl('/patient-view/' + this.patient.id);
   }
 
 }

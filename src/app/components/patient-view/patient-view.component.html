@@ -124,12 +124,12 @@
       <tr>
         <th>MNA</th>
         <th>
-          <label *ngIf="patient.MnaForm != null">Ispunjena</label>
-          <label *ngIf="patient.MnaForm == null">Neispunjena</label>
+          <label *ngIf="patient.mnaForm != null">Ispunjena</label>
+          <label *ngIf="patient.mnaForm == null">Neispunjena</label>
         </th>
         <th>
-            <button *ngIf="patient.MnaForm == null" type="button" class="btn btn-primary" routerLink="/mna/{{patient.id}}/create">Kreiraj</button>
-            <button *ngIf="patient.MnaForm != null" type="button" class="btn btn-success" routerLink="/mna/{{patient.id}}/edit">Izmeni</button>
+            <button *ngIf="patient.mnaForm == null" type="button" class="btn btn-primary" routerLink="/mna/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.mnaForm != null" type="button" class="btn btn-success" routerLink="/mna/{{patient.id}}/edit">Izmeni</button>
         </th>
       </tr>
   </tbody>

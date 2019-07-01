@@ -7,11 +7,11 @@
   </thead>
   <tbody>
     <tr>
-      <th><input [(ngModel)]="mmseForm.orientationTime" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.orientationTime" type="number" class="form-control" min=0 max=5></th>
       <th>Koja je (godina) (god. doba) (mesec) (datum) (dan)? (Jedan poen za svaki tačan odgovor, maksimum 5 poena)</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.orientationLocation" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.orientationLocation" type="number" class="form-control" min=0 max=5></th>
       <th>Gde de nalazimo? (država) (republika) (grad) (bolnica) (sprat) (Skoruj kao prethodnom zadatku).</th>
     </tr>
     <tr>
@@ -19,11 +19,11 @@
       <th>Upamćivanje</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.memoryObjects" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.memoryObjects" type="number" class="form-control" min=0 max=3></th>
       <th>Ispitivač imenuje 3 predmeta. Zatim zahteva od bolesnika da ponovi sva 3 naziva.</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.memoryAttempts" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.memoryAttempts" type="number" class="form-control"></th>
       <th>Jedan poen zahteva od bolesnika odgovor, maksimum 3 poena. Nastaviti sa ponavljanjem sve dok ih ne nauči. Zapisati broj pokušaja.</th>
     </tr>
     <tr>
@@ -31,7 +31,7 @@
       <th>Pažnja i računanje</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.calculation" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.calculation" type="number" class="form-control" min=0 max=5></th>
       <th>Serija 100-7. Jedan poen dati za svaki tač an odgovor (93, 86, 79, 72, 65, - 
         stop). Ili, koliko bolesnik ne može da izvede prethodni zadatak, neka 
         izgovori reč "vrata" unazad. Skoruje se broj izgovorenih glasova u pravilnom
@@ -43,7 +43,7 @@
       <th>Odloženo pamćenje</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.memoryDelayed" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.memoryDelayed" type="number" class="form-control"></th>
       <th>Bolesnik treba da ponovi reči koje je prethodno upamtio. (Jedan poen za svaku tačnu reč).</th>
     </tr>
     <tr>
@@ -51,23 +51,23 @@
       <th>Govorni testovi</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.speechNaming" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.speechNaming" type="number" class="form-control" min=0 max=2></th>
       <th>Imenovanje - olovka, sat (2 poena).</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.speechRepetition" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.speechRepetition" type="number" class="form-control" min=0 max=1></th>
       <th>Ponavljanje - "Prva srpska artiljeriska brigada" (1 poen)</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.speechTripleOrder" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.speechTripleOrder" type="number" class="form-control" min=0 max=3></th>
       <th>Izvođenje trostrukog naloga: "Desnom rukom uzmite hartiju presavijete je napola i bacite na pod". (3 poena).</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.speechReading" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.speechReading" type="number" class="form-control" min=0 max=1></th>
       <th>Čitanje - Na listu hartije napisati nalog "zatvorite oči" dovoljno krupnim slovima da bolesnik jasno vidi. Zahtevati da pročita i da uradi to što je napisano. (1 poen).</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.writing" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.writing" type="number" class="form-control" min=0 max=1></th>
       <th>Pisanje - "Na ovom listu hartije napišite jednu rečenicu, koju ste sami smislili". Rečenica  mora  imati  smisao.  Pravilna  gramatika  i  interpunkcija  nisu neophodne(1 poen).</th>
     </tr>
     <tr>
@@ -75,7 +75,7 @@
       <th>Crtanje</th>
     </tr>
     <tr>
-      <th><input [(ngModel)]="mmseForm.drawing" type="text"></th>
+      <th><input [(ngModel)]="mmseForm.drawing" type="number" class="form-control" min=0 max=1></th>
       <th>Precrtavanje uzorka geometrijske figure (dva petougla) što je moguće. Dva
         petougla se moraju presecati i moraju biti prisutni svi uglovi. Tremor i rotacija
         se zanemaruju. (1 poen).</th>
@@ -83,4 +83,4 @@
   </tbody>
 </table>
 
-<button (click)="save()">Save</button>
+<button class="btn btn-primary" (click)="save()">Sačuvaj</button>

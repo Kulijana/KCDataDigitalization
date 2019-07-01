@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GdsSrbForm } from '../../classes/gds-srb-form';
 import { CompletePatient } from '../../classes/complete-patient';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PatientService } from '../../services/patient.service';
 
 @Component({
@@ -16,24 +16,25 @@ export class GdsSrbComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private patientService: PatientService
   ) { }
 
   ngOnInit() {
-            // TODO rewrite how the patient is retrieved from the patientSerivice
-            const id = +this.route.snapshot.paramMap.get('id');
-            this.patientService.getPatients().subscribe(patients => this.patient = patients.find(p => p.id == id));
-            const crud = this.route.snapshot.paramMap.get('crud');
-            if(crud == "create"){
-              this.gdsSrbForm = new GdsSrbForm();
-              this.patient.gdsSrbForm = this.gdsSrbForm;
-            }
-            else if(crud == "edit"){
-              this.gdsSrbForm = this.patient.gdsSrbForm;
-            }
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
+    const crud = this.route.snapshot.paramMap.get('crud');
+    if (crud == "create") {
+      this.gdsSrbForm = new GdsSrbForm();
+      this.patient.gdsSrbForm = this.gdsSrbForm;
+    }
+    else if (crud == "edit") {
+      this.gdsSrbForm = this.patient.gdsSrbForm;
+    }
   }
 
-  save(){
-    console.dir(this.gdsSrbForm);
+  save() {
+    this.patientService.updatePatient(this.patient);
+    this.router.navigateByUrl('/patient-view/' + this.patient.id);
   }
 }

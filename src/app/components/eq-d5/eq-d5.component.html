@@ -1,7 +1,7 @@
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <tr>
-    <td>Pokretljivost</td>
-    <td>
+    <th>Pokretljivost</th>
+    <th>
       <div class="custom-control custom-radio">
         <input type="radio" class="custom-control-input" id="pokretljivost0" name="pokretljivost"
         [(ngModel)]="eqD5Form.movement" value="0">
@@ -17,11 +17,11 @@
         [(ngModel)]="eqD5Form.movement" value="2">
         <label class="custom-control-label" for="pokretljivost2">Vezan sam za postelju</label>
       </div>
-    </td>
+    </th>
   </tr>
   <tr>
-    <td>Briga o sebi</td>
-    <td>
+    <th>Briga o sebi</th>
+    <th>
       <div class="custom-control custom-radio">
         <input type="radio" class="custom-control-input" id="brigaOSebi0" name="brigaOSebi"
         [(ngModel)]="eqD5Form.selfCare" value="0">
@@ -37,7 +37,7 @@
         [(ngModel)]="eqD5Form.selfCare" value="2">
         <label class="custom-control-label" for="brigaOSebi2">Nisam u stanju da se operem ili obučem</label>
       </div>
-    </td>
+    </th>
   </tr>
   <tr>
     <th>Uobičajene aktivnosti(npr. posao, učenje, kućni poslovi, porodične ili slobodne aktivnosti)</th>
@@ -101,8 +101,8 @@
   </tr>
   <tr>
     <th>Vaše zdravstveno stanje danas</th>
-    <th><input type="text"  [(ngModel)]="eqD5Form.healthStatus"></th>
+    <th><input class="form-control" type="number" min=1 max=100 [(ngModel)]="eqD5Form.healthStatus"></th>
   </tr>
 </table>
 
-<button class="btn btn-primary" (click)="save()">Save</button>
+<button class="btn btn-primary" (click)="save()">Sačuvaj</button>

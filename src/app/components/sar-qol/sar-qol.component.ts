@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SarQolForm } from '../../classes/sar-qol-form';
 import { CompletePatient } from '../../classes/complete-patient';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PatientService } from '../../services/patient.service';
 
 @Component({
@@ -16,13 +16,13 @@ export class SarQolComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private patientService: PatientService
   ) { }
 
   ngOnInit() {
-    // TODO rewrite how the patient is retrieved from the patientSerivice
     const id = +this.route.snapshot.paramMap.get('id');
-    this.patientService.getPatients().subscribe(patients => this.patient = patients.find(p => p.id == id));
+    this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
     const crud = this.route.snapshot.paramMap.get('crud');
     if (crud == "create") {
       this.sarQolForm = new SarQolForm();
@@ -33,4 +33,8 @@ export class SarQolComponent implements OnInit {
     }
   }
 
+  save() {
+    this.patientService.updatePatient(this.patient);
+    this.router.navigateByUrl('/patient-view/' + this.patient.id);
+  }
 }

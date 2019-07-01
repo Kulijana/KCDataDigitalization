@@ -1,7 +1,7 @@
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <tbody>
     <tr>
-      <th>A. Side-by-side-stand</th>
+      <th style="width: 40%">A. Side-by-side-stand</th>
       <th>Score</th>
     </tr>
     <tr>
@@ -33,7 +33,7 @@
     </tr>
     <tr>
       <th>Number of seconds held if less than 10 seconds:</th>
-      <th><input type="text" [(ngModel)]="sppbForm.sideBySideStandLess" [disabled]="sppbForm.sideBySideStand != 2"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.sideBySideStandLess" [disabled]="sppbForm.sideBySideStand != 2"></th>
     </tr>
     <tr>
       <th>B. Semi-Tandem Stand</th>
@@ -108,22 +108,22 @@
     </tr>
     <tr>
       <th>Number of seconds held if less than 10 seconds:</th>
-      <th><input type="text" [(ngModel)]="sppbForm.tandemStandLess"
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.tandemStandLess"
           [disabled]="sppbForm.tandemStand != 2 && sppbForm.tandemStand != 3"></th>
     </tr>
   </tbody>
 </table>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Gait speed test scoring</th>
+      <th style="width: 40%">Gait speed test scoring</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>1. Time for 4 meters</th>
-      <th><input type="text" [(ngModel)]="sppbForm.gaitSpeedTime"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.gaitSpeedTime"></th>
     </tr>
     <tr>
       <th>2, If participant did not attempt test or failed, circle why:</th>
@@ -176,7 +176,7 @@
     <tr>
       <th>Other(specify)</th>
       <th>
-        <input type="text" [(ngModel)]="sppbForm.gaitSpeedFailReasonOther"
+        <input type="text" class="form-control" [(ngModel)]="sppbForm.gaitSpeedFailReasonOther"
           [disabled]="sppbForm.gaitSpeedFailReason != 6">
         <div class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="gaitSpeedFailReason6" name="gaitSpeedFailReason"
@@ -252,10 +252,10 @@
   </tbody>
 </table>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Single Chair Stand Test</th>
+      <th style="width: 40%">Single Chair Stand Test</th>
     </tr>
   </thead>
   <tbody>
@@ -353,7 +353,7 @@
     <tr>
       <th>Other</th>
       <th>
-        <input type="text" [(ngModel)]="sppbForm.singleChairFailReasonOther"
+        <input type="text" class="form-control" [(ngModel)]="sppbForm.singleChairFailReasonOther"
           [disabled]="sppbForm.singleChairFailReason != 6">
         <div class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="singleChairFailReason6" name="singleChairFailReason"
@@ -373,10 +373,10 @@
   </tbody>
 </table>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Repeated Chair Stand Test</th>
+      <th style="width: 40%">Repeated Chair Stand Test</th>
     </tr>
   </thead>
   <tbody>
@@ -395,7 +395,7 @@
     </tr>
     <tr>
       <th>B. If five stands done successfully, record time in seconds.</th>
-      <th>Time to complete five stands(seconds). <input type="text" [(ngModel)]="sppbForm.repeatedChairResult"></th>
+      <th>Time to complete five stands(seconds). <input type="number" class="form-control" [(ngModel)]="sppbForm.repeatedChairResult"></th>
     </tr>
     <tr>
       <th>If participant did not attempt test or failed, circle why:</th>
@@ -448,7 +448,7 @@
     <tr>
       <th>Other</th>
       <th>
-        <input type="text" [(ngModel)]="sppbForm.repeatedChairFailReasonOther"
+        <input type="text" class="form-control" [(ngModel)]="sppbForm.repeatedChairFailReasonOther"
           [disabled]="sppbForm.repeatedChairFailReason != 6">
         <div class="custom-control custom-radio">
           <input type="radio" class="custom-control-input" id="repeatedChairFailReason6" name="repeatedChairFailReason"
@@ -468,10 +468,10 @@
   </tbody>
 </table>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Scoring the Repeated Chair Test</th>
+      <th style="width: 40%">Scoring the Repeated Chair Test</th>
       <th>Score</th>
     </tr>
   </thead>
@@ -524,53 +524,55 @@
   </tbody>
 </table>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Scoring for Complete Short Physical Performance Battery</th>
-      <th>//TODO Generate score values</th>
+      <th style="width: 40%">Scoring for Complete Short Physical Performance Battery</th>
+      <th>TODO</th>
     </tr>
   </thead>
 </table>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Dinamometar</th>
+      <th style="width: 40%">Dinamometar</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Desna ruka</th>
-      <th><input type="text" [(ngModel)]="sppbForm.rightArm"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.rightArm"></th>
     </tr>
     <tr>
       <th>Leva ruka</th>
-      <th><input type="text" [(ngModel)]="sppbForm.leftArm"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.leftArm"></th>
     </tr>
     <tr>
       <th>Obim leve nadlaktice</th>
-      <th><input type="text" [(ngModel)]="sppbForm.upperLeftArm"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.upperLeftArm"></th>
     </tr>
     <tr>
       <th>Obim desne nadlaktice</th>
-      <th><input type="text" [(ngModel)]="sppbForm.upperRightArm"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.upperRightArm"></th>
     </tr>
     <tr>
       <th>Obim leve potkolenice</th>
-      <th><input type="text" [(ngModel)]="sppbForm.leftShin"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.leftShin"></th>
     </tr>
     <tr>
       <th>Obim desne potkolenice</th>
-      <th><input type="text" [(ngModel)]="sppbForm.rightShin"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.rightShin"></th>
     </tr>
     <tr>
       <th>Raspon ruku</th>
-      <th><input type="text" [(ngModel)]="sppbForm.handRange"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.handRange"></th>
     </tr>
     <tr>
       <th>Obim struka</th>
-      <th><input type="text" [(ngModel)]="sppbForm.waistSize"></th>
+      <th><input type="number" class="form-control" [(ngModel)]="sppbForm.waistSize"></th>
     </tr>
   </tbody>
 </table>
+
+<button class="btn btn-primary" (click)="save()">Sačuvaj</button>
