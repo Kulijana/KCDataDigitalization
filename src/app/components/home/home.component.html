@@ -1,15 +1,3 @@
-<!-- TODO this is to be removed, here for testing purposes-->
-<button (click)="gotoNewPatient()">Create a new patient</button>
-<button (click)="gotoSarcF()">Fill out SARC-F</button>
-<button (click)="gotoEqD5()">Fill out EQ-D5</button>
-<button (click)="gotoGdsSrb()">Fill out Gds-Srb</button>
-<button (click)="gotoSF36()">Fill out SF-36</button>
-<button (click)="gotoMmse()">Fill out mmse</button>
-<button (click)="gotoIpaq()">Fill out ipaq</button>
-<button (click)="gotoSarQol()">Fill out SarQol</button>
-<button (click)="gotoSppb()">Fill out Sppb</button>
-<button (click)="gotoMna()">Fill out Mna</button>
-
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Pacijenti</h6>
@@ -40,7 +28,10 @@
             <th>{{p.basicPatient.number}}</th>
             <th>{{p.basicPatient.nameSurname}}</th>
             <th>{{p.basicPatient.jmbg}}</th>
-            <th>TODO Ankete gotove/ne gotove</th>
+            <th>
+              <p *ngIf="isComplete(p) == true">Kompletiran</p>
+              <p *ngIf="isComplete(p) == false">Nekompletiran</p>
+            </th>
             <th><button class="btn btn-primary" routerLink='/patient-view/{{p.id}}'>Pregled pacijenta</button></th>
           </tr>
         </tbody>

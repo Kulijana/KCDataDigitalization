@@ -13,6 +13,8 @@ export class MmseComponent implements OnInit {
 
   patient: CompletePatient;
   mmseForm: MmseForm;
+  id: number;
+  crud: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,19 +23,21 @@ export class MmseComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
-    const crud = this.route.snapshot.paramMap.get('crud');
-    if (crud == "create") {
+    this.id = +this.route.snapshot.paramMap.get('id');
+    this.patientService.getPatientById(this.id).subscribe(patient => this.patient = patient);
+    this.crud = this.route.snapshot.paramMap.get('crud');
+    if (this.crud == "create") {
       this.mmseForm = new MmseForm();
-      this.patient.mmseForm = this.mmseForm;
     }
-    else if (crud == "edit") {
+    else if (this.crud == "edit") {
       this.mmseForm = this.patient.mmseForm;
     }
   }
 
   save() {
+    if(this.crud == "create"){
+      this.patient.mmseForm = this.mmseForm;
+    }
     this.patientService.updatePatient(this.patient);
     this.router.navigateByUrl('/patient-view/' + this.patient.id);
   }

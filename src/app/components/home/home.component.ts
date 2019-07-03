@@ -21,43 +21,11 @@ export class HomeComponent implements OnInit {
     this.patientService.getPatients().subscribe(data => this.patients = data);
   }
 
-  gotoNewPatient(){
-    this.router.navigateByUrl('/new-patient');
-  }
-
-  gotoSarcF(){
-    this.router.navigateByUrl('/sarc-f');
-  }
-
-  gotoEqD5(){
-    this.router.navigateByUrl('/eq-d5');
-  }
-  
-  gotoGdsSrb(){
-    this.router.navigateByUrl('/gds-srb');
-  }
-
-  gotoSF36(){
-    this.router.navigateByUrl('/sf36');
-  }
-
-  gotoMmse(){
-    this.router.navigateByUrl('/mmse');
-  }
-
-  gotoIpaq(){
-    this.router.navigateByUrl('/ipaq');
-  }
-
-  gotoSarQol(){
-    this.router.navigateByUrl('/sar-qol');
-  }
-
-  gotoSppb(){
-    this.router.navigateByUrl('/sppb');
-  }
-
-  gotoMna(){
-    this.router.navigateByUrl('/mna')
-  }
+  public isComplete(patient: CompletePatient): boolean{
+    if(patient.eQD5Form != null && patient.gdsSrbForm != null && patient.ipaqForm != null && patient.mmseForm !=null 
+      && patient.mnaForm != null && patient.sarQolForm != null && patient.sarcFForm != null 
+      && patient.sf36Form != null && patient.sppbForm != null)
+        return true;
+    return false;
+}
 }

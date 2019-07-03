@@ -13,6 +13,8 @@ export class EqD5Component implements OnInit {
 
   patient: CompletePatient;
   eqD5Form: EqD5Form;
+  id: number;
+  crud: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,19 +23,21 @@ export class EqD5Component implements OnInit {
   ) { }
 
   ngOnInit() {
-        const id = +this.route.snapshot.paramMap.get('id');
-        this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
-        const crud = this.route.snapshot.paramMap.get('crud');
-        if(crud == "create"){
+        this.id = +this.route.snapshot.paramMap.get('id');
+        this.patientService.getPatientById(this.id).subscribe(patient => this.patient = patient);
+        this.crud = this.route.snapshot.paramMap.get('crud');
+        if(this.crud == "create"){
           this.eqD5Form = new EqD5Form();
-          this.patient.eQD5Form = this.eqD5Form;
         }
-        else if(crud == "edit"){
+        else if(this.crud == "edit"){
           this.eqD5Form = this.patient.eQD5Form;
         }
   }
 
   save(){
+    if(this.crud == "create"){
+      this.patient.eQD5Form = this.eqD5Form;
+    }
     this.patientService.updatePatient(this.patient);
     this.router.navigateByUrl('/patient-view/' + this.patient.id);
   }

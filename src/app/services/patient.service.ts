@@ -19,7 +19,8 @@ export class PatientService {
   getPath: string = 'assets/data/patients.json';
   setPath: string = process.cwd() + '/src/assets/data/patients.json';
   // the production version
-  // path: String = process.cwd() + '/resources/data/patients.json'
+  // getPath: string = process.cwd() + '/resources/data/patients.json'
+  // setPath: string = process.cwd() + '/resources/data/patients.json'
 
   constructor(
     private http: Http

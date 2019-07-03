@@ -13,6 +13,8 @@ export class SarcFComponent implements OnInit {
 
   patient: CompletePatient;
   sarcFForm: SarcFForm;
+  id: number;
+  crud: string;
 
   constructor(
     private patientService: PatientService,
@@ -21,19 +23,21 @@ export class SarcFComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
-    const crud = this.route.snapshot.paramMap.get('crud');
-    if (crud == "create") {
+    this.id = +this.route.snapshot.paramMap.get('id');
+    this.patientService.getPatientById(this.id).subscribe(patient => this.patient = patient);
+    this.crud = this.route.snapshot.paramMap.get('crud');
+    if (this.crud == "create") {
       this.sarcFForm = new SarcFForm();
-      this.patient.sarcFForm = this.sarcFForm;
     }
-    else if (crud == "edit") {
+    else if (this.crud == "edit") {
       this.sarcFForm = this.patient.sarcFForm;
     }
   }
 
   save() {
+    if(this.crud == "create"){
+      this.patient.sarcFForm = this.sarcFForm;
+    }
     this.patientService.updatePatient(this.patient);
     this.router.navigateByUrl('/patient-view/' + this.patient.id);
   }

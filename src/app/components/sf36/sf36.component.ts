@@ -12,8 +12,9 @@ import { PatientService } from '../../services/patient.service';
 export class Sf36Component implements OnInit {
 
   patient: CompletePatient;
-
   sf36Form: Sf36Form;
+  id: number;
+  crud: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,19 +25,21 @@ export class Sf36Component implements OnInit {
 
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.patientService.getPatientById(id).subscribe(patient => this.patient = patient);
-    const crud = this.route.snapshot.paramMap.get('crud');
-    if(crud == "create"){
+    this.id = +this.route.snapshot.paramMap.get('id');
+    this.patientService.getPatientById(this.id).subscribe(patient => this.patient = patient);
+    this.crud = this.route.snapshot.paramMap.get('crud');
+    if(this.crud == "create"){
       this.sf36Form = new Sf36Form();
-      this.patient.sf36Form = this.sf36Form;
     }
-    else if(crud == "edit"){
+    else if(this.crud == "edit"){
       this.sf36Form = this.patient.sf36Form;
     }
   }
 
   save(){
+    if(this.crud == "create"){
+      this.patient.sf36Form = this.sf36Form;
+    }
     this.patientService.updatePatient(this.patient);
     this.router.navigateByUrl('/patient-view/' + this.patient.id);
   }

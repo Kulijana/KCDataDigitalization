@@ -33,4 +33,6 @@ export class CompletePatient{
         this.sppbForm = new SppbForm();
         this.mnaForm = new MnaForm();
     }
+    
+
 }
