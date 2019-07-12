@@ -12,6 +12,7 @@ import { SarQolComponent } from './components/sar-qol/sar-qol.component';
 import { SppbComponent } from './components/sppb/sppb.component';
 import { MnaComponent } from './components/mna/mna.component';
 import { PatientViewComponent } from './components/patient-view/patient-view.component';
+import { GeriatricAssessmentComponent } from './components/geriatric-assessment/geriatric-assessment.component';
 
 const routes: Routes = [
     {
@@ -61,6 +62,10 @@ const routes: Routes = [
     {
         path: 'mna/:id/:crud',
         component: MnaComponent
+    },
+    {
+        path: 'geriatric-assessment/:id/:crud',
+        component: GeriatricAssessmentComponent
     }
 ];
 

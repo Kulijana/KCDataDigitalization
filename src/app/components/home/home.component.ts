@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   public isComplete(patient: CompletePatient): boolean{
     if(patient.eQD5Form != null && patient.gdsSrbForm != null && patient.ipaqForm != null && patient.mmseForm !=null 
       && patient.mnaForm != null && patient.sarQolForm != null && patient.sarcFForm != null 
-      && patient.sf36Form != null && patient.sppbForm != null)
+      && patient.sf36Form != null && patient.sppbForm != null && patient.geriatricAssessmentForm !=null)
         return true;
     return false;
 }

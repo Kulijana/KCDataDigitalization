@@ -1,0 +1,410 @@
+<button class="btn btn-secondary" style="margin-bottom: 1% ; margin-top: 1%"
+    routerLink="/patient-view/{{patient.id}}">Povratak na pacijenta</button>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Jedenje</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="eating1" name="eating"
+                    [(ngModel)]="geriatricAssessmentForm.eating" value=2>
+                <label class="custom-control-label" for="eating1">Jede bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="eating2" name="eating"
+                    [(ngModel)]="geriatricAssessmentForm.eating" value=1>
+                <label class="custom-control-label" for="eating2">Treba pomoć samo kada seče meso ili maže puter na hleb
+                    (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="eating3" name="eating"
+                    [(ngModel)]="geriatricAssessmentForm.eating" value=0>
+                <label class="custom-control-label" for="eating3">Treba pomoć pri jelu ili se hrani intravenski
+                    (0)</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Oblačenje</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="clothing1" name="clothing"
+                    [(ngModel)]="geriatricAssessmentForm.clothing" value=2>
+                <label class="custom-control-label" for="clothing1">Skida se i oblači bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="clothing2" name="clothing"
+                    [(ngModel)]="geriatricAssessmentForm.clothing" value=1>
+                <label class="custom-control-label" for="clothing2">Treba pomoć samo kada obuva cipele (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="clothing3" name="clothing"
+                    [(ngModel)]="geriatricAssessmentForm.clothing" value=0>
+                <label class="custom-control-label" for="clothing3">Treba pomoć pri oblačenju ili skidanju ili ostale
+                    delimično ili potpuno neobučena (0)</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Kupanje</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="bathing1" name="bathing"
+                    [(ngModel)]="geriatricAssessmentForm.bathing" value=2>
+                <label class="custom-control-label" for="bathing1">Kupa se bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="bathing2" name="bathing"
+                    [(ngModel)]="geriatricAssessmentForm.bathing" value=1>
+                <label class="custom-control-label" for="bathing2">Treba pomoć pri pranju dela tela(leđa) (1)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="bathing3" name="bathing"
+                    [(ngModel)]="geriatricAssessmentForm.bathing" value=0>
+                <label class="custom-control-label" for="bathing3">Treba pomoć pri pranju više od jednog dela tela ili
+                    se ne kupa uopšte (0)</label></div>
+        </th>
+    </tr>
+
+    <tr>
+        <th>Kretanje</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="moving1" name="moving"
+                    [(ngModel)]="geriatricAssessmentForm.moving" value=2>
+                <label class="custom-control-label" for="moving1">Kreće se u i van kreveta ili stolice(može koristiti
+                    štap ili hodalicu) (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="moving2" name="moving"
+                    [(ngModel)]="geriatricAssessmentForm.moving" value=1>
+                <label class="custom-control-label" for="moving2">Treba pomoć pri kretanju u i iz kreveta ili stolice
+                    (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="moving3" name="moving"
+                    [(ngModel)]="geriatricAssessmentForm.moving" value=0>
+                <label class="custom-control-label" for="moving3">Ne ustaje iz kreveta (0)</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Toaleta</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="bathroom1" name="bathroom"
+                    [(ngModel)]="geriatricAssessmentForm.bathroom" value=2>
+                <label class="custom-control-label" for="bathroom1">Ide u kupatilo (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="bathroom2" name="bathroom"
+                    [(ngModel)]="geriatricAssessmentForm.bathroom" value=1>
+                <label class="custom-control-label" for="bathroom2">Treba pomoć pri odlasku u kupatilo (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="bathroom3" name="bathroom"
+                    [(ngModel)]="geriatricAssessmentForm.bathroom" value=0>
+                <label class="custom-control-label" for="bathroom3">Ne ide u kupatilo niti u wc (0)</label></div>
+        </th>
+    </tr>
+
+    <tr>
+        <th>Kontinencija</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="continence1" name="continence"
+                    [(ngModel)]="geriatricAssessmentForm.continence" value=2>
+                <label class="custom-control-label" for="continence1">Kontroliše mokraćnu bešiku i creva potpuno
+                    (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="continence2" name="continence"
+                    [(ngModel)]="geriatricAssessmentForm.continence" value=1>
+                <label class="custom-control-label" for="continence2">Povremeno gubi kontrolu nad mokrenjem ili stolicom
+                    (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="continence3" name="continence"
+                    [(ngModel)]="geriatricAssessmentForm.continence" value=0>
+                <label class="custom-control-label" for="continence3">Treba nadzor u kontroli bešike i creva (0)</label>
+            </div>
+        </th>
+    </tr>
+</table>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Možete li sami pripremiti jelo?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="mealPrepping1" name="mealPrepping"
+                    [(ngModel)]="geriatricAssessmentForm.mealPrepping" value=2>
+                <label class="custom-control-label" for="mealPrepping1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="mealPrepping2" name="mealPrepping"
+                    [(ngModel)]="geriatricAssessmentForm.mealPrepping" value=1>
+                <label class="custom-control-label" for="mealPrepping2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="mealPrepping3" name="mealPrepping"
+                    [(ngModel)]="geriatricAssessmentForm.mealPrepping" value=0>
+                <label class="custom-control-label" for="mealPrepping3">Nesposoban/na totalno da pripremi bilo koje jelo
+                    (0)</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Možete li sami raditi po kući?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="housework1" name="housework"
+                    [(ngModel)]="geriatricAssessmentForm.housework" value=2>
+                <label class="custom-control-label" for="housework1">Može bez pomoći (2)
+                </label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="housework2" name="housework"
+                    [(ngModel)]="geriatricAssessmentForm.housework" value=1>
+                <label class="custom-control-label" for="housework2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="housework3" name="housework"
+                    [(ngModel)]="geriatricAssessmentForm.housework" value=0>
+                <label class="custom-control-label" for="housework3">Nesposoban/na da radi bilo koji kućni posao</label>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>Možete li sami oprati veš</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="clothWashing1" name="clothWashing"
+                    [(ngModel)]="geriatricAssessmentForm.clothWashing" value=2>
+                <label class="custom-control-label" for="clothWashing1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="clothWashing2" name="clothWashing"
+                    [(ngModel)]="geriatricAssessmentForm.clothWashing" value=1>
+                <label class="custom-control-label" for="clothWashing2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="clothWashing3" name="clothWashing"
+                    [(ngModel)]="geriatricAssessmentForm.clothWashing" value=0>
+                <label class="custom-control-label" for="clothWashing3">Nesposoban/na da uopšte opere veš</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Da li uzimate i možete li uzeti prepisane lekove?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="prescribedMedication1" name="prescribedMedication"
+                    [(ngModel)]="geriatricAssessmentForm.prescribedMedication" value=2>
+                <label class="custom-control-label" for="prescribedMedication1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="prescribedMedication2" name="prescribedMedication"
+                    [(ngModel)]="geriatricAssessmentForm.prescribedMedication" value=1>
+                <label class="custom-control-label" for="prescribedMedication2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="prescribedMedication3" name="prescribedMedication"
+                    [(ngModel)]="geriatricAssessmentForm.prescribedMedication" value=0>
+                <label class="custom-control-label" for="prescribedMedication3">Nesposoban/na da uzme lek bez tuđe
+                    pomoći
+                </label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Možete li putovati prevoznim sredstvima?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="traveling1" name="traveling"
+                    [(ngModel)]="geriatricAssessmentForm.traveling" value=2>
+                <label class="custom-control-label" for="traveling1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="traveling2" name="traveling"
+                    [(ngModel)]="geriatricAssessmentForm.traveling" value=1>
+                <label class="custom-control-label" for="traveling2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="traveling3" name="traveling"
+                    [(ngModel)]="geriatricAssessmentForm.traveling" value=0>
+                <label class="custom-control-label" for="traveling3">Nesposoban/na da putuje</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Možete li kupovati namirnice?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="groceryShopping1" name="groceryShopping"
+                    [(ngModel)]="geriatricAssessmentForm.groceryShopping" value=2>
+                <label class="custom-control-label" for="groceryShopping1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="groceryShopping2" name="groceryShopping"
+                    [(ngModel)]="geriatricAssessmentForm.groceryShopping" value=1>
+                <label class="custom-control-label" for="groceryShopping2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="groceryShopping3" name="groceryShopping"
+                    [(ngModel)]="geriatricAssessmentForm.groceryShopping" value=0>
+                <label class="custom-control-label" for="groceryShopping3">Potpuno nesposoban/na da ide u
+                    kupovinu</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Možete li upravljati svojim novcem?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="moneyManagement1" name="moneyManagement"
+                    [(ngModel)]="geriatricAssessmentForm.moneyManagement" value=2>
+                <label class="custom-control-label" for="moneyManagement1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="moneyManagement2" name="moneyManagement"
+                    [(ngModel)]="geriatricAssessmentForm.moneyManagement" value=1>
+                <label class="custom-control-label" for="moneyManagement2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="moneyManagement3" name="moneyManagement"
+                    [(ngModel)]="geriatricAssessmentForm.moneyManagement" value=0>
+                <label class="custom-control-label" for="moneyManagement3">Potpuno nesposoban/na da upravlja svojim
+                    novcem</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Možete li koristiti telefon?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="phoneUsage1" name="phoneUsage"
+                    [(ngModel)]="geriatricAssessmentForm.phoneUsage" value=2>
+                <label class="custom-control-label" for="phoneUsage1">Može bez pomoći (2)</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="phoneUsage2" name="phoneUsage"
+                    [(ngModel)]="geriatricAssessmentForm.phoneUsage" value=1>
+                <label class="custom-control-label" for="phoneUsage2">Treba neku pomoć (1)</label></div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="phoneUsage3" name="phoneUsage"
+                    [(ngModel)]="geriatricAssessmentForm.phoneUsage" value=0>
+                <label class="custom-control-label" for="phoneUsage3">Potpuno nesposoban/na da koristi telefon
+                    (0)</label></div>
+        </th>
+    </tr>
+</table>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Reći tri objekta, tražiti da ponovi odmah, a zatim nakon 5 minuta(upisati broj objekata koje je ponovio oba
+            puta)</th>
+        <th><input [(ngModel)]="geriatricAssessmentForm.objectMemory" type="number" class="form-control"></th>
+    </tr>
+    <tr>
+        <th>Nacrtati sat tako da je na njemu 11 sati i 10 minuta</th>
+        <th><input [(ngModel)]="geriatricAssessmentForm.clock" type="text" class="form-control"></th>
+    </tr>
+    <tr>
+        <th>Pitati pacijenta da navede tačan datum i dan u sedmici</th>
+        <th><input [(ngModel)]="geriatricAssessmentForm.dateTime" type="text" class="form-control"></th>
+    </tr>
+    <tr>
+        <th>Zamoliti pacijenta da stavi ruke na potiljak, a potom da podigne glavu (upisati komentar)</th>
+        <th><input [(ngModel)]="geriatricAssessmentForm.headRaise" type="text" class="form-control"></th>
+    </tr>
+</table>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Da li ste se tokom poslednjih mesec dana osećali tužno, beznadežno, depresivno?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="depressed1" name="depressed"
+                    [(ngModel)]="geriatricAssessmentForm.depressed" value=true>
+                <label class="custom-control-label" for="depressed1">da</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="depressed2" name="depressed"
+                    [(ngModel)]="geriatricAssessmentForm.depressed" value=false>
+                <label class="custom-control-label" for="depressed2">ne</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Da li ste poslednjih mesec dana izgubili interes za aktivnosti koje su Vam ranije pričinjavale zadovoljstvo?
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="lostInterest1" name="lostInterest"
+                    [(ngModel)]="geriatricAssessmentForm.lostInterest" value=true>
+                <label class="custom-control-label" for="lostInterest1">da</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="lostInterest2" name="lostInterest"
+                    [(ngModel)]="geriatricAssessmentForm.lostInterest" value=false>
+                <label class="custom-control-label" for="lostInterest2">ne</label></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Da li se osećate nesigurno među svojim ukućanima? Da li Vam neko preti ili na drugi način ugrožava sigurnost?</th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="feelingUnsafe1" name="feelingUnsafe"
+                    [(ngModel)]="geriatricAssessmentForm.feelingUnsafe" value=true>
+                <label class="custom-control-label" for="feelingUnsafe1">da</label>
+            </div>
+        </th>
+        <th>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="feelingUnsafe2" name="feelingUnsafe"
+                    [(ngModel)]="geriatricAssessmentForm.feelingUnsafe" value=false>
+                <label class="custom-control-label" for="feelingUnsafe2">ne</label></div>
+        </th>
+    </tr>
+</table>
+
+<button class="btn btn-primary" (click)="save()">Sačuvaj</button>

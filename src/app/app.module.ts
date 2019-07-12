@@ -31,6 +31,7 @@ import { SppbComponent } from './components/sppb/sppb.component';
 import { MnaComponent } from './components/mna/mna.component';
 import { PatientViewComponent } from './components/patient-view/patient-view.component';
 import { PatientService } from './services/patient.service';
+import { GeriatricAssessmentComponent } from './components/geriatric-assessment/geriatric-assessment.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -52,7 +53,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SarQolComponent,
     SppbComponent,
     MnaComponent,
-    PatientViewComponent
+    PatientViewComponent,
+    GeriatricAssessmentComponent
   ],
   imports: [
     BrowserModule,

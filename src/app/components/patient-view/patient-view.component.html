@@ -132,5 +132,16 @@
             <button *ngIf="patient.mnaForm != null" type="button" class="btn btn-success" routerLink="/mna/{{patient.id}}/edit">Izmeni</button>
         </th>
       </tr>
+      <tr>
+        <th>Gerijatrijska procena</th>
+        <th>
+          <label *ngIf="patient.geriatricAssessmentForm != null">Ispunjena</label>
+          <label *ngIf="patient.geriatricAssessmentForm == null">Neispunjena</label>
+        </th>
+        <th>
+            <button *ngIf="patient.geriatricAssessmentForm == null" type="button" class="btn btn-primary" routerLink="/geriatric-assessment/{{patient.id}}/create">Kreiraj</button>
+            <button *ngIf="patient.geriatricAssessmentForm != null" type="button" class="btn btn-success" routerLink="/geriatric-assessment/{{patient.id}}/edit">Izmeni</button>
+        </th>
+      </tr>
   </tbody>
 </table>

@@ -8,6 +8,7 @@ import { SarcFForm } from "./sarc-f-form";
 import { Sf36Form } from "./sf36-form";
 import { SppbForm } from "./sppb-form";
 import { MnaForm } from "./mna-form";
+import { GeriatricAssessmentForm } from "./geriatric-assessment-form";
 
 export class CompletePatient{
     id: number;
@@ -21,6 +22,7 @@ export class CompletePatient{
     sf36Form: Sf36Form;
     sppbForm: SppbForm;
     mnaForm: MnaForm;
+    geriatricAssessmentForm: GeriatricAssessmentForm;
 
     CompletePatien(){
         this.eQD5Form = undefined;
@@ -32,6 +34,7 @@ export class CompletePatient{
         this.sf36Form = new Sf36Form();
         this.sppbForm = new SppbForm();
         this.mnaForm = new MnaForm();
+        this.geriatricAssessmentForm = new GeriatricAssessmentForm();
     }
     
 
